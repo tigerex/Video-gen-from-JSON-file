@@ -1,0 +1,1040 @@
+{
+  "videoMetadata": {
+    "title": "Automate Your Content From Idea to LIVE Article in Minutes",
+    "resolution": "1920x1080",
+    "fps": 30
+  },
+  "scenes": [
+    {
+      "scene_id": 1,
+      "slide_id": 1,
+      "audioUrl": "https://drive.google.com/file/d/16yvluYop5Q3rqb5EXa8rK_1BnsE_cMFO/view?usp=drivesdk",
+      "audioDuration_sec": 59,
+      "layers": [
+        {
+          "layer_id": "image_bg_1",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1KwCp3hnAKyZv4fT0-irZoKQmlfQkOEea/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "topLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_1",
+          "type": "text",
+          "content": "Automate Your Content:",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 200,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_1",
+          "type": "text",
+          "content": "From Idea to LIVE Article in Minutes",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_0",
+          "type": "text",
+          "content": "Unlock unparalleled speed and efficiency in your content workflow.",
+          "font": "Open Sans",
+          "size": 38,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 450,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_1",
+          "type": "text",
+          "content": "Transform how you create, publish, and scale your content efforts.",
+          "font": "Open Sans",
+          "size": 38,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 520,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 6,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 2,
+      "slide_id": 2,
+      "audioUrl": "https://drive.google.com/file/d/1v2IFExmN8fkWl3Jdd3jVL2YlIKNNKAA-/view?usp=drivesdk",
+      "audioDuration_sec": 94,
+      "layers": [
+        {
+          "layer_id": "image_bg_2",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1wL6aYHY_0MXvrDGOL7h_jvTbKiMnrhHQ/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "bottomRight"
+          }
+        },
+        {
+          "layer_id": "title_text_2",
+          "type": "text",
+          "content": "The Content Creation Conundrum:",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 200,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_2",
+          "type": "text",
+          "content": "Why Manual Processes Are Holding You Back",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_0",
+          "type": "text",
+          "content": "Time-Consuming & Resource-Intensive: Endless hours spent on research, writing, editing, and publishing.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 450,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_1",
+          "type": "text",
+          "content": "Scalability Bottlenecks: Struggling to increase content output without sacrificing quality or burning out your team.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 520,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 9,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_2",
+          "type": "text",
+          "content": "Inconsistent Quality & Brand Voice: Maintaining coherence across diverse content pieces is a constant battle.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 590,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 14,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_3",
+          "type": "text",
+          "content": "Missed Opportunities: Slow production means you're often behind trends and losing competitive edge.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 660,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 19,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 3,
+      "slide_id": 3,
+      "audioUrl": "https://drive.google.com/file/d/1UGUgQXYGNRvrgdxNny_uE3rXnf5jg5vM/view?usp=drivesdk",
+      "audioDuration_sec": 81,
+      "layers": [
+        {
+          "layer_id": "image_bg_3",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1Ay-kWfuvYFml24FnbnjRDqNAlw1N8qbk/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "topRight"
+          }
+        },
+        {
+          "layer_id": "title_text_3",
+          "type": "text",
+          "content": "Unveiling the Solution:",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 200,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_3",
+          "type": "text",
+          "content": "The Transformative Power of Content Automation",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_0",
+          "type": "text",
+          "content": "What is Content Automation? Leveraging smart tools and AI to streamline repetitive tasks in content creation.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 450,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_1",
+          "type": "text",
+          "content": "Move Beyond Manual: Shift from tedious chores to strategic oversight and creative direction.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 520,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 9,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_2",
+          "type": "text",
+          "content": "Unlock New Possibilities: Imagine generating high-quality drafts, optimizing for SEO, and publishing – all with unprecedented speed.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 590,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 14,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_3",
+          "type": "text",
+          "content": "Your Competitive Edge: Automation isn't just about doing more; it's about doing it smarter, faster, and more effectively.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 660,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 19,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 4,
+      "slide_id": 4,
+      "audioUrl": "https://drive.google.com/file/d/1AVUcZF_es13ID1DCg8S3e-4sC7GwCDkl/view?usp=drivesdk",
+      "audioDuration_sec": 117.5,
+      "layers": [
+        {
+          "layer_id": "image_bg_4",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1Uwl4RHFq6sM7TfiwcORw51RUMn_t0YpE/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "bottomLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_4",
+          "type": "text",
+          "content": "From Concept to Click:",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 200,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_4",
+          "type": "text",
+          "content": "Your Simplified Automated Content Journey",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_0",
+          "type": "text",
+          "content": "Idea Generation & Topic Research: AI-powered tools suggest relevant topics and gather initial data points.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 450,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_1",
+          "type": "text",
+          "content": "First Draft Generation: Automated systems create compelling article outlines and initial content drafts based on your input.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 520,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 9,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_2",
+          "type": "text",
+          "content": "Optimization & Refinement: Tools assist with SEO, readability checks, and grammar, making your content shine.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 590,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 14,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_3",
+          "type": "text",
+          "content": "Seamless Publishing: Integrate with your CMS to schedule and publish articles with minimal manual intervention.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 660,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 19,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_4",
+          "type": "text",
+          "content": "Analyze & Iterate: Track performance and use insights to refine your automated strategies for continuous improvement.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 730,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 24,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 5,
+      "slide_id": 5,
+      "audioUrl": "https://drive.google.com/file/d/1KJw1X2G6kSmXDWFEPEHV_2v8kyBoVFtS/view?usp=drivesdk",
+      "audioDuration_sec": 112.5,
+      "layers": [
+        {
+          "layer_id": "image_bg_5",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/14JRcfxIk8w8VRTZIO6Ge_kZt9gfPKRXd/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "topLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_5",
+          "type": "text",
+          "content": "Tangible Business Impact:",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 200,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_5",
+          "type": "text",
+          "content": "Unleash Efficiency, Scale, and ROI",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_5_0",
+          "type": "text",
+          "content": "Massive Time Savings: Reclaim hours (or days!) previously spent on manual tasks, focusing on strategy and creativity.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 450,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_5_1",
+          "type": "text",
+          "content": "Exponential Content Scale: Produce more high-quality articles, blog posts, and marketing materials than ever before.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 520,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 9,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_5_2",
+          "type": "text",
+          "content": "Enhanced Content Quality & Consistency: Maintain a strong brand voice and ensure high standards across all outputs.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 590,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 14,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_5_3",
+          "type": "text",
+          "content": "Significant Cost Reduction: Optimize resource allocation and reduce reliance on extensive manual labor.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 660,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 19,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_5_4",
+          "type": "text",
+          "content": "Strategic Advantage: Stay ahead of competitors by rapidly responding to market trends and audience needs.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 730,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 24,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 6,
+      "slide_id": 6,
+      "audioUrl": "https://drive.google.com/file/d/1fYJqHJBSrKmEuMeXDM7K2eN9JHC22-Jw/view?usp=drivesdk",
+      "audioDuration_sec": 136.5,
+      "layers": [
+        {
+          "layer_id": "color_bg_6",
+          "type": "color",
+          "color": "#1a1a1a",
+          "animation": {
+            "type": "none"
+          }
+        },
+        {
+          "layer_id": "title_text_6",
+          "type": "text",
+          "content": "Real-World Scenarios:",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 200,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_6",
+          "type": "text",
+          "content": "Content Automation in Action for Your Role",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_6_0",
+          "type": "text",
+          "content": "For Product Managers: Quickly generate user guides, feature announcements, and FAQs based on product updates.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 450,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_6_1",
+          "type": "text",
+          "content": "For Marketing Heads: Automate blog post creation for SEO, social media captions, and email campaign content.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 520,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 9,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_6_2",
+          "type": "text",
+          "content": "For Content Creators: Streamline research, overcome writer's block with AI-generated drafts, and accelerate editing.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 590,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 14,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_6_3",
+          "type": "text",
+          "content": "For Small Business Owners: Produce consistent, professional website content, local SEO articles, and promotional materials without a large team.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 660,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 19,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 7,
+      "slide_id": 7,
+      "audioUrl": "https://drive.google.com/file/d/13kuzLDguEwJg-ANIFfFgcCgAFODj1YFN/view?usp=drivesdk",
+      "audioDuration_sec": 115,
+      "layers": [
+        {
+          "layer_id": "image_bg_7",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1P1w_EWcYWmguO0xz1HDdFPwy_--Sjug6/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "topRight"
+          }
+        },
+        {
+          "layer_id": "title_text_7",
+          "type": "text",
+          "content": "Your Path to Automation:",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 200,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_7",
+          "type": "text",
+          "content": "Getting Started Today – Simple Steps to Success",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_7_0",
+          "type": "text",
+          "content": "Identify Your Pain Points: Where in your current workflow can automation make the biggest difference?",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 450,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_7_1",
+          "type": "text",
+          "content": "Start Small & Experiment: Choose one content type or a specific task to automate first.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 520,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 9,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_7_2",
+          "type": "text",
+          "content": "Explore User-Friendly Tools: Research platforms that offer intuitive interfaces and robust automation features (no coding required!).",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 590,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 14,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_7_3",
+          "type": "text",
+          "content": "Define Your Goals: What do you want to achieve? (e.g., 2x content output, 50% time savings).",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 660,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 19,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_7_4",
+          "type": "text",
+          "content": "Educate & Empower Your Team: Foster a culture of experimentation and continuous improvement.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 730,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 24,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 8,
+      "slide_id": 8,
+      "audioUrl": "https://drive.google.com/file/d/1ZnyylSV7LBgYGVdUXiF2Vbk12iwZLJk2/view?usp=drivesdk",
+      "audioDuration_sec": 79,
+      "layers": [
+        {
+          "layer_id": "image_bg_8",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1QZlWfTN-6O5NK7RTCNwJiG4RAwmUvKwv/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "bottomRight"
+          }
+        },
+        {
+          "layer_id": "title_text_8",
+          "type": "text",
+          "content": "Q&A and Conclusion:",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 200,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_8",
+          "type": "text",
+          "content": "Transform Your Content Strategy – The Future is Automated",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_8_0",
+          "type": "text",
+          "content": "Key Takeaways: Automation isn't just about speed; it's about strategic advantage, scalability, and freeing up your creative potential.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 450,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_8_1",
+          "type": "text",
+          "content": "Your Opportunity: Embrace this shift to revolutionize your content game and achieve unprecedented results.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 520,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 9,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_8_2",
+          "type": "text",
+          "content": "Questions? Let's discuss how automation can specifically benefit your business.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 590,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 14,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_8_3",
+          "type": "text",
+          "content": "Thank You! Start your automation journey today and watch your content thrive.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 200,
+            "y": 660,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInFromLeft",
+            "startTime_sec": 19,
+            "duration_sec": 1
+          }
+        }
+      ]
+    }
+  ]
+}
