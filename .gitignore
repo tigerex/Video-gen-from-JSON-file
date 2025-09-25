@@ -1,2 +1,6 @@
 /venv
 /downloads
+/tmp
+.env
+*.mp4
+*.mp3
