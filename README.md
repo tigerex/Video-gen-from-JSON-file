@@ -32,8 +32,7 @@ The output is an automatically composed video rendered with animations and synce
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/auto-video-composer.git
-cd auto-video-composer
+git clone https://github.com/votuduc/mcp_Agents.git
 ```
 
 ---
@@ -65,7 +64,7 @@ pip install -r requirements.txt
 
 ---
 
-### 4️⃣ Get a Google Fonts API Key
+### 4️⃣ Get a Google Fonts API Key (Unfinished Documenting)
 
 1. Visit: [Google Cloud Console → Credentials](https://console.cloud.google.com/apis/credentials)
 2. Enable the **Google Fonts Developer API**
