@@ -155,15 +155,6 @@ See `DEVELOPMENT_NOTES.md` for a comprehensive list of known issues, suggested f
 
 ---
 
-## 🔐 License
-
-Specify your preferred license here (e.g., MIT) or add `LICENSE` file to the repo.
-
----
-
 ## 🙋 Need help?
 
-If you want, I can:
-- Insert this README into your repo as `/mnt/data/README.md` (done), and commit changes locally if you provide git details.
-- Generate a sample `.env.example` file.
-- Add a `CONTRIBUTING.md` or `ISSUE_TEMPLATE.md` to guide contributors.
+Me too 😭!
