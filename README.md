@@ -1,4 +1,4 @@
-# JSON to VIDEO — Renderer (MoviePy + Tkinter)
+# 🎬 JSON to VIDEO — Renderer (MoviePy + Tkinter)
 
 **A JSON-driven video composition and rendering pipeline built with MoviePy (v2) and a Tkinter UI.**  
 This project converts scene descriptions (JSON) into stitched videos, with per-scene parallel rendering, asset management, font fetching, and a simple GUI for previewing and launching renders.
@@ -44,36 +44,35 @@ This repository uses **MoviePy 2.x** APIs and aims to be robust against partial 
 ## ⚡ Setup (Windows)
 
 1. **Clone repository** (or download and extract ZIP):
-   ```powershell
-   git clone <your-repo-url>
-   cd json-to-video
+   ```bash
+   git clone https://github.com/votuduc/mcp_Agents.git
    ```
 
 2. **Create a virtual environment** (recommended):
-   ```powershell
-   python -m venv .venv
-   .\.venv\Scripts\Activate.ps1   # PowerShell
-   # Or for Command Prompt:
-   # .\.venv\Scripts\activate.bat
+   ```bash
+   python -m venv .venv   # Create
+   ```
+   ```bash
+   .\.venv\Scripts\Activate.ps1   # Activate
    ```
 
 3. **Upgrade pip (optional but recommended):**
-   ```powershell
-   python -m pip install --upgrade pip setuptools wheel
+   ```bash
+   python -m pip install --upgrade pip
    ```
 
 4. **Install dependencies** using the provided `requirements.txt`:
-   ```powershell
+   ```bash
    pip install -r requirements.txt
    ```
 
 5. **Install FFmpeg** and add it to your PATH (see official download page). Confirm installation:
-   ```powershell
+   ```bash
    ffmpeg -version
    ```
 
 6. **Google Fonts API (optional but recommended for custom fonts)**:
-   - Get an API key from Google Fonts Developer API (or use alternative font sources).
+   - Get an API key from Google Fonts Developer API.
    - Create a file named `.env` (in the project root) containing:
      ```text
      GOOGLE_FONTS_API_KEY=your_api_key_here
@@ -87,14 +86,14 @@ This repository uses **MoviePy 2.x** APIs and aims to be robust against partial 
 
 ### GUI (recommended)
 Run the Tkinter UI which is the main user-facing entry point:
-```powershell
+```bash
 python UI_moviePy.py
 ```
 Use the UI to import your JSON (default file `scene_composition_agent_output.json`), download assets, tweak resolution/fps, and start rendering. You can view per-scene logs in the UI and use **Stop** or **SCRAM** controls as needed.
 
 ### CLI (developer)
 There is also a CLI entry point in `final_solution.py` (single-file runner):
-```powershell
+```bash
 python final_solution.py path/to/project.json
 ```
 > Note: The UI currently depends on `final_solution` functions for backend orchestration. If you prefer CLI-only workflows, `final_solution.py` contains the core pipeline functions (download, render scenes, concatenate).
@@ -115,7 +114,6 @@ python final_solution.py path/to/project.json
 ├─ final_solution.py            # Core rendering backend used by UI and CLI
 ├─ scene_composition_agent_output.json  # example/default JSON input
 ├─ requirements.txt             # Python package dependencies
-├─ DEVELOPMENT_NOTES.md         # Detailed outstanding issues & roadmap
 └─ README.md                    # (this file)
 ```
 
