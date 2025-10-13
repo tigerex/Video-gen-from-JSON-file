@@ -1,193 +1,171 @@
-# 🎬 Automated Video Composition Project
+# JSON to VIDEO — Renderer (MoviePy + Tkinter)
 
-This project automates **video creation from structured JSON scene data** — transforming text, images, and audio into a rendered video using Python.  
-It is designed for dynamic marketing, tutorials, or AI-generated content pipelines.
-
----
-
-## 📁 Project Overview
-
-The system reads a JSON file (`scene_composition_agent_output.json`) describing:
-- 🎞️ **Scenes**: Each with background image/video, text layers, and animations  
-- 🔊 **Audio narration**: One per scene  
-- ✍️ **Typography & layout info**: Fonts, positions, transitions  
-
-The output is an automatically composed video rendered with animations and synced audio.
+**A JSON-driven video composition and rendering pipeline built with MoviePy (v2) and a Tkinter UI.**  
+This project converts scene descriptions (JSON) into stitched videos, with per-scene parallel rendering, asset management, font fetching, and a simple GUI for previewing and launching renders.
 
 ---
 
-## 🧰 Features
+## 🚀 Project Overview
 
-- Load multi-scene compositions from JSON  
-- Add background images, text overlays, and Ken Burns-style animations  
-- Fade, slide, and zoom transitions  
-- Combine with scene-specific audio  
-- Use **Google Fonts API** to dynamically fetch fonts  
-- Output customizable by **resolution** (360p → Full HD) and **FPS (30/60)**  
+`JSON to VIDEO` consumes a scene composition JSON file and produces a finished video by:
+1. Downloading required assets (images, audio, fonts).
+2. Rendering each scene as an independent video clip (parallelizable).
+3. Concatenating scene clips into a final video.
+4. Providing a Tkinter-based UI (`UI_moviePy.py`) to preview, configure, and run renders, plus per-scene logging and emergency controls (SCRAM).
+
+This repository uses **MoviePy 2.x** APIs and aims to be robust against partial failures (fallback scenes, logging) while keeping a simple workflow for non-technical users.
 
 ---
 
-## 🚀 Setup Instructions
+## ✨ Features
 
-### 1️⃣ Clone the Repository
+- JSON-driven scene specification (layers, animations, timings).
+- Parallel scene rendering using `ProcessPoolExecutor` to leverage multi-core CPUs.
+- Asset caching and download index for Google Drive links (via `gdown`).
+- Google Fonts integration (optional) with fallback font handling.
+- Tkinter UI for importing projects, previewing scenes, downloading assets, and launching renders.
+- Per-scene logs captured from child render processes; visible in the UI.
+- Graceful Stop (finish current scene) and SCRAM (immediate hard kill) controls.
+- Safe fallbacks for missing assets or rendering broadcast errors (blank scene fallback).
 
-```bash
-git clone https://github.com/votuduc/mcp_Agents.git
+---
+
+## ⚙️ Requirements & Recommendations (Windows)
+
+- **OS:** Windows 10 / 11 recommended.
+- **Python:** 3.10 — 3.12 (use latest stable within this range).
+- **FFmpeg:** Required and must be on `PATH`. Download: https://ffmpeg.org/download.html
+  - After installing, ensure the `ffmpeg` executable is available in the Command Prompt.
+  - Optional: If you have an NVIDIA GPU and want faster encoding, install the appropriate NVENC-enabled ffmpeg build and make sure your GPU drivers are current.
+- **CPU / RAM:** Multi-core CPU recommended for parallel rendering; available RAM affects the number of simultaneous processes.
+
+---
+
+## ⚡ Setup (Windows)
+
+1. **Clone repository** (or download and extract ZIP):
+   ```powershell
+   git clone <your-repo-url>
+   cd json-to-video
+   ```
+
+2. **Create a virtual environment** (recommended):
+   ```powershell
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1   # PowerShell
+   # Or for Command Prompt:
+   # .\.venv\Scripts\activate.bat
+   ```
+
+3. **Upgrade pip (optional but recommended):**
+   ```powershell
+   python -m pip install --upgrade pip setuptools wheel
+   ```
+
+4. **Install dependencies** using the provided `requirements.txt`:
+   ```powershell
+   pip install -r requirements.txt
+   ```
+
+5. **Install FFmpeg** and add it to your PATH (see official download page). Confirm installation:
+   ```powershell
+   ffmpeg -version
+   ```
+
+6. **Google Fonts API (optional but recommended for custom fonts)**:
+   - Get an API key from Google Fonts Developer API (or use alternative font sources).
+   - Create a file named `.env` (in the project root) containing:
+     ```text
+     GOOGLE_FONTS_API_KEY=your_api_key_here
+     ```
+
+7. **(Optional) Allow executable permissions** for scripts if required by your environment.
+
+---
+
+## 🏃 How to run
+
+### GUI (recommended)
+Run the Tkinter UI which is the main user-facing entry point:
+```powershell
+python UI_moviePy.py
+```
+Use the UI to import your JSON (default file `scene_composition_agent_output.json`), download assets, tweak resolution/fps, and start rendering. You can view per-scene logs in the UI and use **Stop** or **SCRAM** controls as needed.
+
+### CLI (developer)
+There is also a CLI entry point in `final_solution.py` (single-file runner):
+```powershell
+python final_solution.py path/to/project.json
+```
+> Note: The UI currently depends on `final_solution` functions for backend orchestration. If you prefer CLI-only workflows, `final_solution.py` contains the core pipeline functions (download, render scenes, concatenate).
+
+---
+
+## 📁 Project Structure
+
+```
+├─ /.venv/                      # optional virtual env (gitignored)
+├─ /assets/                     # downloaded images/audio/fonts cache
+│   ├─ audio/
+│   ├─ images/
+│   └─ fonts/
+├─ /results/                    # rendered final videos and logs
+├─ /temp/                       # temporary scene outputs (auto-clean recommended)
+├─ UI_moviePy.py                # Tkinter-based UI (main entrypoint for now)
+├─ final_solution.py            # Core rendering backend used by UI and CLI
+├─ scene_composition_agent_output.json  # example/default JSON input
+├─ requirements.txt             # Python package dependencies
+├─ DEVELOPMENT_NOTES.md         # Detailed outstanding issues & roadmap
+└─ README.md                    # (this file)
 ```
 
 ---
 
-### 2️⃣ Create and Activate a Virtual Environment
+## 🔁 Workflow Summary
 
-#### macOS / Linux
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-#### Windows (PowerShell)
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
+1. Author a scene JSON describing `videoMetadata` and `scenes[]` (layers, audioUrl, animations).
+2. Open `UI_moviePy.py` and **Import JSON**. Review scenes in the Preview tab.
+3. Click **Download Assets** to fetch images, audio and fonts. These are cached under `/assets/` and tracked in `download_index.json`.
+4. Configure resolution/fps if needed on the Preview tab. Press **Start Rendering** in the Render tab.
+5. Each scene is rendered in a separate worker process (parallel). Per-scene logs are created (e.g., `logs/scene_1.log`).
+6. On completion, scene MP4s are concatenated into a final video in `/results/` and a JSON log summarizing the render is saved (includes timing and system info).
 
 ---
 
-### 3️⃣ Install Dependencies
+## 🛠 Troubleshooting & Tips (Windows)
 
-Make sure you have `pip` up to date, then install all requirements:
-
-```bash
-pip install --upgrade pip
-pip install -r requirements.txt
-```
-
----
-
-### 4️⃣ Get a Google Fonts API Key (Unfinished Documenting)
-
-1. Visit: [Google Cloud Console → Credentials](https://console.cloud.google.com/apis/credentials)
-2. Enable the **Google Fonts Developer API**
-3. Create an **API key**
-4. Store it locally in a `.env` file at the project root:
-
-```
-GOOGLE_FONTS_API_KEY=your_api_key_here
-```
+- **`ffmpeg` not found**: Ensure ffmpeg is installed and added to PATH. Restart your terminal if newly installed.
+- **Fonts rendering oddly or missing glyphs**: Verify your `GOOGLE_FONTS_API_KEY` in `.env` and ensure fonts downloaded into `/assets/fonts/`. If fonts fail, the fallback `DejaVuSans.ttf` is used.
+- **Text clipped / wrong position**: Try enabling `"method": "caption"` for text layers in JSON or increase canvas height/vertical padding.
+- **Slow concatenation on many short scenes**: See `DEVELOPMENT_NOTES.md` — consider using ffmpeg concat demuxer or batching concatenation.
+- **Child process crashes**: Check per-scene log files in `/results/` or `temp/` to see MoviePy / ffmpeg output. Use SCRAM to force-kill hung processes and inspect logs.
+- **Audio desync or truncation**: Make sure audio durations are accurately specified in JSON and the scene duration field; backend subclips audio to scene safe duration before attach.
 
 ---
 
-### 5️⃣ Prepare Your Input JSON
+## 🧭 Development Notes & Roadmap
 
-Your input should follow the format of `scene_composition_agent_output.json`, e.g.:
-
-```json
-{
-  "videoMetadata": {
-    "title": "Automate Your Content From Idea to LIVE Article in Minutes",
-    "resolution": "1920x1080",
-    "fps": 30
-  },
-  "scenes": [
-    {
-      "scene_id": 1,
-      "audioUrl": "https://drive.google.com/file/d/.../view",
-      "layers": [
-        {
-          "type": "image",
-          "url": "https://drive.google.com/file/d/.../view",
-          "animation": { "type": "KenBurns", "direction": "topLeft" }
-        },
-        {
-          "type": "text",
-          "content": "Automate Your Content:",
-          "font": "Merriweather",
-          "position": { "x": 960, "y": 200, "anchor": "center" }
-        }
-      ]
-    }
-  ]
-}
-```
+See `DEVELOPMENT_NOTES.md` for a comprehensive list of known issues, suggested fixes, and the priority roadmap. Key short-term items include improving text layout, speeding up concatenation (ffmpeg), and expanding animation options.
 
 ---
 
-### 6️⃣ Run the Video Composer
+## 🧪 Testing & Contribution
 
-If your main script is `testMoviePy.ipynb` or `main.py`, execute:
-
-```bash
-python main.py
-```
-
-or inside Jupyter Notebook:
-
-```python
-%run testMoviePy.ipynb
-```
-
-This will:
-- Parse the JSON file  
-- Download images/audio from Google Drive  
-- Fetch fonts from the Google Fonts API  
-- Generate the final composed video  
+- Add unit tests for JSON parsing and small scene render smoke tests (can be in a `tests/` folder).
+- When contributing: branch from `main`, open a PR, include a short description and link to any rendered example videos if possible.
+- Follow coding style PEP8/flake8 for new Python code.
 
 ---
 
-## ⚙️ Configuration
+## 🔐 License
 
-| Option | Description | Default |
-|--------|--------------|----------|
-| `--input` | Path to JSON composition file | `scene_composition_agent_output.json` |
-| `--output` | Output video filename | `output_<date>.mp4` |
-| `--resolution` | Target resolution (360p–1080p) | From JSON |
-| `--fps` | Frames per second (30/60) | From JSON |
+Specify your preferred license here (e.g., MIT) or add `LICENSE` file to the repo.
 
 ---
 
-## 📦 Project Structure
+## 🙋 Need help?
 
-```
-.
-├── scene_composition_agent_output.json
-├── testMoviePy.ipynb
-├── requirements.txt
-├── .env
-├── assets/
-│   ├── images/
-│   ├── audio/
-│   └── fonts/
-└── output/
-    └── final_video.mp4
-```
-
----
-
-## 🧩 Dependencies
-
-- **moviepy** – video composition and rendering  
-- **Pillow** – image processing  
-- **requests** – API and file downloads  
-- **python-dotenv** – environment variable handling  
-- **gdown** or **pydrive2** – Google Drive asset downloads  
-
----
-
-## 🧠 Workflow Summary
-
-1. Load composition data from JSON  
-2. Initialize video metadata (fps, resolution, title)  
-3. Download fonts, images, and audio assets  
-4. Generate clips for each scene (text + animation)  
-5. Combine and synchronize with audio  
-6. Export final MP4 video  
-
----
-
-## 💡 Tips
-
-- Always activate your virtual environment before running scripts  
-- If assets don’t download, check Google Drive sharing permissions  
-- Make sure `ffmpeg` is installed and accessible in your system PATH  
-- Use `.env` for private keys and configs — never commit them to Git  
-
+If you want, I can:
+- Insert this README into your repo as `/mnt/data/README.md` (done), and commit changes locally if you provide git details.
+- Generate a sample `.env.example` file.
+- Add a `CONTRIBUTING.md` or `ISSUE_TEMPLATE.md` to guide contributors.

@@ -1,6 +1,10 @@
 /venv
 /downloads
 /tmp
+/assets
 .env
 *.mp4
 *.mp3
+*.jpg
+
+demo_*
