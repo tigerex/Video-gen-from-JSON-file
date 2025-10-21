@@ -1,0 +1,1352 @@
+{
+  "videoMetadata": {
+    "title": "Rethinking the Content Marketing Workflow: From Tool Chaos to a Single Source of Truth",
+    "resolution": "1920x1080",
+    "fps": 30
+  },
+  "scenes": [
+    {
+      "scene_id": 1,
+      "slide_id": 1,
+      "audioUrl": "https://drive.google.com/file/d/1K7AL5mwqmHL-3eeMHZVs7qlmBWX7sbYW/view?usp=drivesdk",
+      "audioDuration_sec": 50,
+      "layers": [
+        {
+          "layer_id": "image_bg_1",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/18ZUlevc0iEcXytCx8rmkSFSSr8fLJ71F/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "topLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_1",
+          "type": "text",
+          "content": "Rethinking Your Content Marketing Workflow",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "subtitle_text_1",
+          "type": "text",
+          "content": "From Tool Chaos to a Single Source of Truth",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_1",
+          "type": "text",
+          "content": "Unlocking a simpler, more effective way to manage your content.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_2",
+          "type": "text",
+          "content": "Imagine a world with less context-switching and clearer ROI.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 610,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 26,
+            "duration_sec": 0.75
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 2,
+      "slide_id": 2,
+      "audioUrl": "https://drive.google.com/file/d/1x0FsRuxzgA8nj5Po_BfTjOSFZQcerUsc/view?usp=drivesdk",
+      "audioDuration_sec": 75.5,
+      "layers": [
+        {
+          "layer_id": "image_bg_2",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1_mgL9tgjyCD6TlsWLBeh9PUMXBg86lo1/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 0.9,
+            "direction": "topRight"
+          }
+        },
+        {
+          "layer_id": "title_text_2",
+          "type": "text",
+          "content": "Meet Marketing Morgan: Juggling It All",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "subtitle_text_2",
+          "type": "text",
+          "content": "Does this sound familiar?",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_1",
+          "type": "text",
+          "content": "The Generalist's Burden: You're the sole marketer, wearing hats for SEO, writing, distribution, and more.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_2",
+          "type": "text",
+          "content": "The Tool Patchwork: Google Docs for drafting, Notion for ideas, Asana for tasks – a different tab for everything.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 610,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 20.62,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_3",
+          "type": "text",
+          "content": "Constant Context-Switching: Losing precious time and focus jumping between disconnected tools.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 670,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 38.24,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_4",
+          "type": "text",
+          "content": "The ROI Riddle: Struggling to connect your hard work to tangible business results for your founder.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 730,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 55.86,
+            "duration_sec": 0.75
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 3,
+      "slide_id": 3,
+      "audioUrl": "https://drive.google.com/file/d/1AEpoPS3hy0OXdpT5uEw0h5fwG3pKzLye/view?usp=drivesdk",
+      "audioDuration_sec": 66,
+      "layers": [
+        {
+          "layer_id": "image_bg_3",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1PIAS4OWaTi1igNCW8htQ1D171htqMcLY/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "bottomLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_3",
+          "type": "text",
+          "content": "The Hidden Costs of 'Good Enough'",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "subtitle_text_3",
+          "type": "text",
+          "content": "Your current workflow is costing more than you think.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_1",
+          "type": "text",
+          "content": "Wasted Time & Energy: Manual transfers, searching for files, and re-entering data steal hours from your week.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_2",
+          "type": "text",
+          "content": "Missed Opportunities: Inconsistent messaging or delayed distribution means your best content doesn't reach its full potential.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 610,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 18.75,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_3",
+          "type": "text",
+          "content": "Burnout & Frustration: The mental load of managing disparate systems is exhausting and unsustainable.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 670,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 34.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_4",
+          "type": "text",
+          "content": "The ROI Gap: Without clear data, it's nearly impossible to confidently show your founder the value of content marketing.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 730,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 50.25,
+            "duration_sec": 0.75
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 4,
+      "slide_id": 4,
+      "audioUrl": "https://drive.google.com/file/d/1Xi7qv4eBu8hYqRoPvv-KeAd3siE7q2yR/view?usp=drivesdk",
+      "audioDuration_sec": 68,
+      "layers": [
+        {
+          "layer_id": "image_bg_4",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1fl8lyOP3nocV55Iz1GuXbcDtoJElqR6d/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 0.9,
+            "direction": "bottomRight"
+          }
+        },
+        {
+          "layer_id": "title_text_4",
+          "type": "text",
+          "content": "Imagine: A Single Source of Truth",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "subtitle_text_4",
+          "type": "text",
+          "content": "Bringing order to your content universe.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_1",
+          "type": "text",
+          "content": "One Central Hub: All your content ideas, drafts, assets, and performance data live in one place.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_2",
+          "type": "text",
+          "content": "Seamless Flow: Content moves effortlessly from strategy to creation, distribution, and analysis.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 610,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 19.25,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_3",
+          "type": "text",
+          "content": "Clarity & Control: Gain a complete overview of your content pipeline and its impact.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 670,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 35.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_4",
+          "type": "text",
+          "content": "Empowerment: Focus on creating great content, not managing tools.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 730,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 51.75,
+            "duration_sec": 0.75
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 5,
+      "slide_id": 5,
+      "audioUrl": "https://drive.google.com/file/d/1OZagFmCwSFtdhAo_8-TfDRNEodmDee6I/view?usp=drivesdk",
+      "audioDuration_sec": 60.5,
+      "layers": [
+        {
+          "layer_id": "image_bg_5",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1z8fXwwq8vfGF8eM9UF6_PziRBPI4Ahf1/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "topLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_5",
+          "type": "text",
+          "content": "Strategy & Planning, Simplified",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "subtitle_text_5",
+          "type": "text",
+          "content": "From scattered ideas to a clear content roadmap.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_5_1",
+          "type": "text",
+          "content": "Centralized Ideation: Capture all your content ideas, research, and keywords in one accessible place.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_5_2",
+          "type": "text",
+          "content": "Dynamic Content Calendar: Visually plan, schedule, and track every piece of content with ease.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 610,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 17.12,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_5_3",
+          "type": "text",
+          "content": "Audience & Persona Mapping: Ensure every piece of content aligns with your target audience and business goals.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 670,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 31.24,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_5_4",
+          "type": "text",
+          "content": "Reduced Mental Load: No more searching through multiple documents for your next big idea.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 730,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 45.36,
+            "duration_sec": 0.75
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 6,
+      "slide_id": 6,
+      "audioUrl": "https://drive.google.com/file/d/15x4mlgj4NSCKnuFIlnO53G9rPQAsiMjs/view?usp=drivesdk",
+      "audioDuration_sec": 63.5,
+      "layers": [
+        {
+          "layer_id": "image_bg_6",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1L6xYb5v5zxuIvuQJ_FFLFXwF8jWhdsnm/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 0.9,
+            "direction": "topRight"
+          }
+        },
+        {
+          "layer_id": "title_text_6",
+          "type": "text",
+          "content": "Create & Collaborate with Confidence",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "subtitle_text_6",
+          "type": "text",
+          "content": "Your content, from draft to final, in one smooth process.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_6_1",
+          "type": "text",
+          "content": "Integrated Drafting & Editing: Write, edit, and optimize content directly within your system.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_6_2",
+          "type": "text",
+          "content": "Simplified Feedback Loops: Streamline reviews and approvals, eliminating endless email chains.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 610,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 17.62,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_6_3",
+          "type": "text",
+          "content": "Version Control & Asset Management: Keep track of changes and easily access all related images, videos, and resources.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 670,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 32.24,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_6_4",
+          "type": "text",
+          "content": "Consistency Guaranteed: Ensure brand voice and messaging are uniform across all content.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 730,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 46.86,
+            "duration_sec": 0.75
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 7,
+      "slide_id": 7,
+      "audioUrl": "https://drive.google.com/file/d/137yw5wvBsfJlhAIXgRuvQ83Gx6vnJo1j/view?usp=drivesdk",
+      "audioDuration_sec": 63.5,
+      "layers": [
+        {
+          "layer_id": "image_bg_7",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1JbScvpq9Hyiuc2pqd3NSaDoBZcu3BU2l/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "bottomLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_7",
+          "type": "text",
+          "content": "Effortless Distribution & Promotion",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "subtitle_text_7",
+          "type": "text",
+          "content": "Get your content out to the world, smarter and faster.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_7_1",
+          "type": "text",
+          "content": "Direct Publishing Integrations: Push content directly to your blog, social media, or email platforms.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_7_2",
+          "type": "text",
+          "content": "Automated Scheduling: Plan and schedule your promotional efforts alongside content creation.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 610,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 17.62,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_7_3",
+          "type": "text",
+          "content": "Cross-Channel Consistency: Ensure your message is tailored and consistent across all distribution channels.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 670,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 32.24,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_7_4",
+          "type": "text",
+          "content": "Reduce Manual Errors: Eliminate copy-pasting and reformatting, saving time and preventing mistakes.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 730,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 46.86,
+            "duration_sec": 0.75
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 8,
+      "slide_id": 8,
+      "audioUrl": "https://drive.google.com/file/d/1Z5VST5kMCq2WP0xW1hyJlHvAWKP0_d3k/view?usp=drivesdk",
+      "audioDuration_sec": 68.5,
+      "layers": [
+        {
+          "layer_id": "image_bg_8",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1mw1GxMgx6clBH_Up3URRR4DiBQuwra2a/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 0.9,
+            "direction": "bottomRight"
+          }
+        },
+        {
+          "layer_id": "title_text_8",
+          "type": "text",
+          "content": "Proving ROI: Show Your Impact",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "subtitle_text_8",
+          "type": "text",
+          "content": "From data chaos to confident conversations with your founder.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_8_1",
+          "type": "text",
+          "content": "Integrated Performance Dashboards: See key metrics like traffic, engagement, and conversions in real-time.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_8_2",
+          "type": "text",
+          "content": "Content-Specific Analytics: Understand which pieces of content are truly driving results.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 610,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 19.37,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_8_3",
+          "type": "text",
+          "content": "Customizable Reports for Founders: Easily generate clear, concise reports that demonstrate content's contribution to business goals.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 670,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 35.74,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_8_4",
+          "type": "text",
+          "content": "Justify Your Investments: Confidently advocate for your content strategy with tangible data.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 730,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 52.11,
+            "duration_sec": 0.75
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 9,
+      "slide_id": 9,
+      "audioUrl": "https://drive.google.com/file/d/1EP9ieE2JQ86Dp9TGIZSCvrFl8UFFv8u_/view?usp=drivesdk",
+      "audioDuration_sec": 66,
+      "layers": [
+        {
+          "layer_id": "image_bg_9",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/10SM_TJGIhJZFwVCdrXVXhjzFEDxAxUzv/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "topLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_9",
+          "type": "text",
+          "content": "What You Gain: More Than Just a Tool",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "subtitle_text_9",
+          "type": "text",
+          "content": "Reclaim your time, reduce your stress, and amplify your impact.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_9_1",
+          "type": "text",
+          "content": "Significant Time Savings: Automate repetitive tasks and eliminate context-switching.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_9_2",
+          "type": "text",
+          "content": "Reduced Stress & Burnout: Enjoy a calmer, more organized workflow.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 610,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 18.75,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_9_3",
+          "type": "text",
+          "content": "Boosted Efficiency & Productivity: Get more done with less effort.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 670,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 34.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_9_4",
+          "type": "text",
+          "content": "Clear, Demonstrable ROI: Confidently show the value of your content to your founder.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 730,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 50.25,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_9_5",
+          "type": "text",
+          "content": "Strategic Focus: Spend more time on creative strategy and less on administrative overhead.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 790,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 66,
+            "duration_sec": 0.75
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 10,
+      "slide_id": 10,
+      "audioUrl": "https://drive.google.com/file/d/1xaAAAes-_t-6ZN0jZXu61n_xXRyBxLk9/view?usp=drivesdk",
+      "audioDuration_sec": 65.5,
+      "layers": [
+        {
+          "layer_id": "image_bg_10",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1OytRmnMUlhMgP_ipA-m1l5-FdpI3nl0U/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 0.9,
+            "direction": "topRight"
+          }
+        },
+        {
+          "layer_id": "title_text_10",
+          "type": "text",
+          "content": "Your Path to Clarity: Let's Get Started",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "subtitle_text_10",
+          "type": "text",
+          "content": "Take the first step towards a more organized, impactful content workflow.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_10_1",
+          "type": "text",
+          "content": "Explore Solutions: Research content marketing platforms designed for unified workflows.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_10_2",
+          "type": "text",
+          "content": "Start Small: Identify one key pain point (e.g., content calendar) to tackle first.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 610,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 18.37,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_10_3",
+          "type": "text",
+          "content": "Pilot & Iterate: Test a new system with a small project to see the benefits firsthand.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 670,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 33.74,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_10_4",
+          "type": "text",
+          "content": "Schedule a Demo: Let's discuss how a tailored solution can transform your daily grind.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 730,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 49.11,
+            "duration_sec": 0.75
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 11,
+      "slide_id": 11,
+      "audioUrl": "https://drive.google.com/file/d/11SEVUfjtVyD5Iuoj182I19l-kz6GMh70/view?usp=drivesdk",
+      "audioDuration_sec": 30.5,
+      "layers": [
+        {
+          "layer_id": "image_bg_11",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1tZrL1TcT_NE75CL46TCAuUk9XpgWbn_A/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "bottomLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_11",
+          "type": "text",
+          "content": "Questions & Next Steps",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "subtitle_text_11",
+          "type": "text",
+          "content": "Ready to transform your content marketing?",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_11_1",
+          "type": "text",
+          "content": "Thank you for your time and attention!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 0.75
+          }
+        },
+        {
+          "layer_id": "bullet_point_11_2",
+          "type": "text",
+          "content": "Let's discuss how a single source of truth can empower your content strategy.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#F0F0F0",
+          "position": {
+            "x": 150,
+            "y": 610,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 16.25,
+            "duration_sec": 0.75
+          }
+        }
+      ]
+    }
+  ]
+}

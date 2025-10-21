@@ -1,0 +1,93 @@
+{
+    "start_time": "2025-10-18T03:48:00.167317",
+    "system": "Windows-10-10.0.26100-SP0",
+    "cpu_count": 16,
+    "status": "completed",
+    "errors": [],
+    "warnings": [],
+    "scenes": {
+        "scene_11": {
+            "slide_id": 11,
+            "duration_sec": 30.5,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_1": {
+            "slide_id": 1,
+            "duration_sec": 50,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_6": {
+            "slide_id": 6,
+            "duration_sec": 63.5,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_5": {
+            "slide_id": 5,
+            "duration_sec": 60.5,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_10": {
+            "slide_id": 10,
+            "duration_sec": 65.5,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_8": {
+            "slide_id": 8,
+            "duration_sec": 68.5,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_7": {
+            "slide_id": 7,
+            "duration_sec": 63.5,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_4": {
+            "slide_id": 4,
+            "duration_sec": 68,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_3": {
+            "slide_id": 3,
+            "duration_sec": 66,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_9": {
+            "slide_id": 9,
+            "duration_sec": 66,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_2": {
+            "slide_id": 2,
+            "duration_sec": 75.5,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        }
+    },
+    "asset_count": 24,
+    "end_time": "2025-10-18T04:34:48.334487",
+    "elapsed_seconds": 2792.44,
+    "avg_scene_seconds": 0.0,
+    "video_metadata": {
+        "title": "Rethinking the Content Marketing Workflow: From Tool Chaos to a Single Source of Truth",
+        "resolution": "1920x1080",
+        "fps": 30,
+        "scene_count": 11
+    },
+    "hardware": {
+        "cpu_percent": 3.9,
+        "memory_used_mb": 7077.43,
+        "memory_total_mb": 16008.93,
+        "gpu_info": "No GPU info (nvidia-smi not found)"
+    },
+    "final_video_path": "C:\\Minh\\workplace\\Internship\\results\\final_output_2025-10-18_03-48-00.mp4"
+}

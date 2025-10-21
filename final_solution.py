@@ -221,15 +221,15 @@ def get_local_asset_path(url: str, kind: str) -> Optional[str]:
     return None
 
 # Fonts
-def fetch_fallback_font() -> str:
+def fetch_fallback_font(api_key: str) -> str:
     ensure_asset_dirs()
-    fallback_path = os.path.join(ASSET_DIRS["fonts"], "DejaVuSans.ttf")
-    if not os.path.exists(fallback_path):
-        print("Downloading fallback font DejaVuSans...")
-        r = requests.get("https://github.com/dejavu-fonts/dejavu-fonts/raw/master/ttf/DejaVuSans.ttf")
-        if r.status_code == 200:
-            with open(fallback_path, "wb") as f:
-                f.write(r.content)
+    fallback_path = os.path.join(ASSET_DIRS["fonts"], "Open_Sans.ttf")
+    # if not os.path.exists(fallback_path):
+    #     print("Downloading fallback font Open_Sans...")
+    #     r = requests.get(url)
+    #     if r.status_code == 200:
+    #         with open(fallback_path, "wb") as f:
+    #             f.write(r.content)
     return fallback_path
 
 def fetch_google_font_via_api(font_name: str, api_key: str) -> str:
@@ -238,14 +238,14 @@ def fetch_google_font_via_api(font_name: str, api_key: str) -> str:
     try:
         r = requests.get(api_url)
         if r.status_code != 200:
-            return fetch_fallback_font()
+            return fetch_fallback_font(api_key)
         data = r.json()
         family_entry = next((f for f in data.get("items", []) if f["family"].lower() == font_name.lower()), None)
         if not family_entry:
-            return fetch_fallback_font()
+            return fetch_fallback_font(api_key)
         font_url = family_entry["files"].get("regular")
         if not font_url:
-            return fetch_fallback_font()
+            return fetch_fallback_font(api_key)
         font_path = os.path.join(ASSET_DIRS["fonts"], f"{font_name.replace(' ', '_')}.ttf")
         if not os.path.exists(font_path):
             resp = requests.get(font_url)
@@ -256,10 +256,10 @@ def fetch_google_font_via_api(font_name: str, api_key: str) -> str:
         return font_path
     except Exception as e:
         print(f"⚠️ Error fetching font {font_name}: {e}")
-        return fetch_fallback_font()
+        return fetch_fallback_font(api_key)
 
 def get_font_path(font_name: Optional[str], api_key: str) -> str:
-    return fetch_google_font_via_api(font_name, api_key) if font_name else fetch_fallback_font()
+    return fetch_google_font_via_api(font_name, api_key) if font_name else fetch_fallback_font(api_key)
 
 # ===============================
 # Animation helpers
@@ -278,9 +278,15 @@ def apply_animation_to_clip(clip, layer: Layer, safe_duration: float, canvas_siz
         clip = clip.with_effects([FadeOut(duration=effect_duration)])
     elif anim_type == "slideinfromleft":
         canvas_w, canvas_h = canvas_size
-        final_x = layer.position.x if layer.position else (canvas_w - clip.w) / 2
-        final_y = layer.position.y if layer.position else (canvas_h - clip.h) / 2
-        start_x = -clip.w
+
+        # --- FIX: Handle case where clip.w might be None (e.g., failed TextClip) ---
+        clip_w = clip.w if clip.w is not None else 0
+        clip_h = clip.h if clip.h is not None else 0
+
+        # Use the fixed clip_w and clip_h here
+        final_x = layer.position.x if layer.position else (canvas_w - clip_w) / 2
+        final_y = layer.position.y if layer.position else (canvas_h - clip_h) / 2
+        start_x = -clip_w
         def pos_fn(t):
             progress = min(max(t / effect_duration, 0.0), 1.0) if effect_duration > 0 else 1.0
             x = start_x + progress * (final_x - start_x)
@@ -348,13 +354,6 @@ def parallel_download_assets(project: VideoProject, api_key: str):
 # Scene rendering (worker processes)
 # ===============================
 def render_scene(scene: Scene, width: int, height: int, api_key: str, temp_dir: str):
-    """
-    Safe version of render_scene that:
-    ✅ Resizes every layer (image, color, text) to match the target resolution
-    ✅ Handles TextClip sizing edge cases
-    ✅ Avoids broadcasting errors when composing layers at non-1080p resolutions
-    ✅ Keeps your animations and structure untouched
-    """
     import os
     from moviepy import CompositeVideoClip, ImageClip, AudioFileClip, TextClip, ColorClip
 
@@ -378,93 +377,97 @@ def render_scene(scene: Scene, width: int, height: int, api_key: str, temp_dir: 
     # ---- Build visual layers ----
     for layer in scene.layers:
         try:
+            clip_to_add = None 
+            
             # 1️⃣ IMAGE LAYERS
             if layer.type == "image" and layer.url:
                 img_path = get_local_asset_path(layer.url, "images") or download_asset(layer.url, "images")
                 if img_path:
-                    img_clip = ImageClip(img_path).resize((width, height)).with_duration(safe_duration)
+                    img_clip = ImageClip(img_path).resized((width, height))
                     if layer.animation and (layer.animation.type or "").lower() == "kenburns":
                         img_clip = apply_kenburns_to_image(img_clip, layer.animation, safe_duration)
-                    img_clip = apply_animation_to_clip(img_clip, layer, safe_duration, (width, height))
-                    layer_clips.append(img_clip)
+                    clip_to_add = img_clip
 
             # 2️⃣ SOLID COLOR BACKGROUND
             elif layer.type == "color" and layer.color:
                 rgb = tuple(int(layer.color.lstrip("#")[i:i + 2], 16) for i in (0, 2, 4))
-                color_clip = ColorClip(size=(width, height), color=rgb).with_duration(safe_duration)
-                color_clip = apply_animation_to_clip(color_clip, layer, safe_duration, (width, height))
-                layer_clips.append(color_clip)
+                clip_to_add = ColorClip(size=(width, height), color=rgb)
 
             # 3️⃣ TEXT LAYERS
             elif layer.type == "text" and (layer.content or "").strip():
                 font_path = get_font_path(layer.font, api_key)
                 try:
+                    # --- Step 1: Create the TextClip ---
+                    text_color = layer.color or "white"
                     txt_clip = TextClip(
                         text=layer.content,
                         font=font_path,
                         font_size=layer.size or 40,
-                        color=layer.color or "white",
-                        size=(width, None),  # allow wrapping horizontally
+                        color=text_color,
+                        # --- ADDED: Fixes Clipping Issue ---
+                        stroke_color=text_color,
+                        # stroke_width=1, # Set a small stroke width (1-2 is usually enough)
+                        # -----------------------------------
+                        size=(width, None), # Allow horizontal wrapping
                         method="caption",
                     )
+                    
+                    # --- Step 2: Calculate Position Manually ---
+                    if layer.position:
+                        # Get the actual rendered size of the text clip
+                        clip_w, clip_h = txt_clip.size
+                        
+                        # Start with the user's desired coordinates
+                        pos_x, pos_y = layer.position.x, layer.position.y
+                        anchor = (layer.position.anchor or "top_left").lower()
+
+                        # Adjust coordinates based on the anchor
+                        # Horizontal adjustment
+                        if "center" in anchor:
+                            pos_x -= clip_w / 2
+                        elif "right" in anchor:
+                            pos_x -= clip_w
+                        
+                        # Vertical adjustment
+                        if "center" in anchor and "top" not in anchor and "bottom" not in anchor: # Middle-center
+                             pos_y -= clip_h / 2
+                        elif "bottom" in anchor:
+                            pos_y -= clip_h
+
+                        # --- Step 3: Apply the final calculated position ---
+                        txt_clip = txt_clip.with_position((pos_x, pos_y))
+
+                    clip_to_add = txt_clip
+
                 except Exception as e:
                     print(f"[Warning] TextClip creation failed for '{layer.content[:30]}': {e}")
                     continue
 
-                # Apply position if defined
-                if layer.position:
-                    txt_clip = txt_clip.with_position((layer.position.x, layer.position.y))
-
-                txt_clip = txt_clip.with_duration(safe_duration)
-                txt_clip = apply_animation_to_clip(txt_clip, layer, safe_duration, (width, height))
-                # Resize explicitly in case of font-rendering issues
-                txt_clip = txt_clip.resize(newsize=(width, None))
-                layer_clips.append(txt_clip)
+            # Apply animations and add the final clip to the list
+            if clip_to_add:
+                final_layer_clip = apply_animation_to_clip(clip_to_add, layer, safe_duration, (width, height))
+                layer_clips.append(final_layer_clip)
 
         except Exception as e:
             print(f"[Warning] Skipped layer due to error in scene {scene.scene_id}: {e}")
 
-    # ---- Ensure at least one layer exists ----
+    # ---- Final Composition & Export ----
     if not layer_clips:
         print(f"[Warning] Scene {scene.scene_id} has no valid visual layers. Using blank background.")
         layer_clips = [ColorClip(size=(width, height), color=(0, 0, 0)).with_duration(safe_duration)]
+    
+    scene_clip = CompositeVideoClip(layer_clips, size=(width, height)).with_duration(safe_duration)
 
-    # ---- Safety pass: enforce matching resolution on all layers ----
-    fixed_layers = []
-    for clip in layer_clips:
-        try:
-            cw, ch = clip.size
-            if (cw, ch) != (width, height):
-                clip = clip.resize(newsize=(width, height))
-        except Exception as e:
-            print(f"[Warning] Could not read clip size: {e}")
-        fixed_layers.append(clip)
-
-    # ---- Compose the final scene ----
-    scene_clip = CompositeVideoClip(fixed_layers, size=(width, height)).with_duration(safe_duration)
-
-    # ---- Attach audio ----
     if audio_clip:
-        try:
-            scene_clip = scene_clip.with_audio(audio_clip.subclipped(0, safe_duration))
-        except Exception as e:
-            print(f"[Warning] Could not attach audio: {e}")
+        scene_clip = scene_clip.with_audio(audio_clip.subclipped(0, safe_duration))
 
-    # ---- Export ----
     scene_out = os.path.join(temp_dir, f"scene_{scene.scene_id}.mp4")
     try:
-        scene_clip.write_videofile(
-            scene_out,
-            fps=30,
-            codec="libx264",
-            audio_codec="aac",
-            threads="auto"
-        )
+        scene_clip.write_videofile(scene_out, fps=30, codec="libx264", audio_codec="aac")
     except Exception as e:
         print(f"[Error] Failed to render scene {scene.scene_id}: {e}")
         raise
     finally:
-        # Clean up MoviePy internal objects
         scene_clip.close()
         if audio_clip:
             audio_clip.close()
@@ -538,19 +541,25 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
                 log_data["errors"].append(f"Scene {scene_id}: {e}")
                 print(f"⚠️ Scene {scene_id} failed: {e}")
 
+    # In build_video_from_project_parallel function
     print("🎞️ Concatenating scenes...")
-    concat_start = time.perf_counter()
-    final_clips = [VideoFileClip(p) for p in sorted(scene_outputs)]
-    final = concatenate_videoclips(final_clips, method="compose")
+    final_clips = [] # Initialize empty list
+    try:
+        final_clips = [VideoFileClip(p) for p in sorted(scene_outputs)]
+        final = concatenate_videoclips(final_clips, method="compose")
 
-    temp_final_path = os.path.join(temp_dir, "final_temp.mp4")
-    final.write_videofile(
-        temp_final_path,
-        codec="libx264",
-        fps=project.metadata.fps,
-        audio_codec="aac",
-        threads="auto"
-    )
+        temp_final_path = os.path.join(temp_dir, "final_temp.mp4")
+        final.write_videofile(
+            temp_final_path,
+            codec="libx264",
+            fps=project.metadata.fps,
+            audio_codec="aac" # Removed threads="auto"
+        )
+        final.close() # Close the concatenated clip
+    finally:
+        # Ensure all intermediate clips are closed
+        for clip in final_clips:
+            clip.close()
 
     # Move final output into results/
     output_path = os.path.join(result_dir, f"final_output_{timestamp_str}.mp4")
@@ -629,7 +638,7 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
 # ===============================
 def main():
     parser = argparse.ArgumentParser(description="Render video from JSON (parallel by default).")
-    parser.add_argument("json_path", nargs="?", default="scene_composition_agent_output.json")
+    parser.add_argument("json_path", nargs="?", default="sorten_to_test_output10.json")
     parser.add_argument("--no-parallel", action="store_true", help="Disable parallel mode.")
     args = parser.parse_args()
 

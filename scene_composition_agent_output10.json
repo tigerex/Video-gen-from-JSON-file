@@ -1,0 +1,1587 @@
+{
+  "videoMetadata": {
+    "title": "Your Content Workflow is Broken: Ditch the Scattered Docs for a Smart Editorial Calendar in Google Sheets",
+    "resolution": "1920x1080",
+    "fps": 30
+  },
+  "scenes": [
+    {
+      "scene_id": 1,
+      "slide_id": 1,
+      "audioUrl": "https://drive.google.com/file/d/1FCtkXHUIZiWGg0MnjI0GgEO3ZvLjQ3ke/view?usp=drivesdk",
+      "audioDuration_sec": 65,
+      "layers": [
+        {
+          "layer_id": "image_bg_1",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1Sg0tfggO4bpYo_xWCwAV0Z4jtbs6MeYL/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "topLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_1",
+          "type": "text",
+          "content": "Your Content Workflow is Broken",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_1",
+          "type": "text",
+          "content": "Ditch the Scattered Docs for a Smart Editorial Calendar in Google Sheets",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#CCCCCC",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_0_1",
+          "type": "text",
+          "content": "Feeling overwhelmed by your content process?",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_1",
+          "type": "text",
+          "content": "Imagine a simpler, more strategic way to manage everything.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 620,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5.5,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 2,
+      "slide_id": 2,
+      "audioUrl": "https://drive.google.com/file/d/1Y84kvgpvggHdlD4CI8RWaEcoEdOK0Xlw/view?usp=drivesdk",
+      "audioDuration_sec": 65.1,
+      "layers": [
+        {
+          "layer_id": "image_bg_2",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1BoLW0NiPhks-RdxqWGLVnDa1hymw7mcx/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1.1,
+            "end_zoom": 1,
+            "direction": "topRight"
+          }
+        },
+        {
+          "layer_id": "title_text_2",
+          "type": "text",
+          "content": "Meet Startup Sarah: The Struggle is Real",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_2",
+          "type": "text",
+          "content": "Sound familiar? You're not alone.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#CCCCCC",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_0_2",
+          "type": "text",
+          "content": "Juggling content ideas in random notes apps.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_2",
+          "type": "text",
+          "content": "Tasks scattered across Trello, emails, and sticky notes.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 620,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_2",
+          "type": "text",
+          "content": "A separate, static spreadsheet for your 'calendar.'",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 690,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_2",
+          "type": "text",
+          "content": "No clear overview of what's happening or what's next.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 760,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 8.5,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 3,
+      "slide_id": 3,
+      "audioUrl": "https://drive.google.com/file/d/17pO5AFGH74Wf-boJMBA60WTRA3-AS-6V/view?usp=drivesdk",
+      "audioDuration_sec": 65.6,
+      "layers": [
+        {
+          "layer_id": "image_bg_3",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1ilB9Y83HGiyVY9tPlToOaM6crWcujYVL/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "bottomLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_3",
+          "type": "text",
+          "content": "The Hidden Costs of Chaos",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_3",
+          "type": "text",
+          "content": "Fragmented workflows aren't just frustrating; they're expensive.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#CCCCCC",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_0_3",
+          "type": "text",
+          "content": "Wasted time searching for assets and approvals.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_3",
+          "type": "text",
+          "content": "Missed deadlines and inconsistent publishing.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 620,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_3",
+          "type": "text",
+          "content": "Difficulty scaling content efforts as your startup grows.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 690,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_3",
+          "type": "text",
+          "content": "Lack of strategic oversight – are you even hitting your goals?",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 760,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 8.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_3",
+          "type": "text",
+          "content": "Burnout and stress from constant reactive work.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 830,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 10,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 4,
+      "slide_id": 4,
+      "audioUrl": "https://drive.google.com/file/d/1tIa_338c1CM8PPsIcPZGRbddc6qxCyzp/view?usp=drivesdk",
+      "audioDuration_sec": 65.1,
+      "layers": [
+        {
+          "layer_id": "image_bg_4",
+          "type": "image",
+          "url": "https://example.com/placeholder_failed_image.jpg",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1.1,
+            "end_zoom": 1,
+            "direction": "bottomRight"
+          }
+        },
+        {
+          "layer_id": "title_text_4",
+          "type": "text",
+          "content": "Imagine This: Your Unified Content Command Center",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_4",
+          "type": "text",
+          "content": "A single source of truth for all your content.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#CCCCCC",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_0_4",
+          "type": "text",
+          "content": "All ideas, tasks, and schedules in one accessible place.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_4",
+          "type": "text",
+          "content": "Clear visibility into every piece of content, from concept to publish.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 620,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_4",
+          "type": "text",
+          "content": "Easy collaboration with team members or freelancers.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 690,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_4",
+          "type": "text",
+          "content": "The ability to plan strategically, not just react.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 760,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 8.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_4",
+          "type": "text",
+          "content": "More time for creativity, less time for administration.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 830,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 10,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 5,
+      "slide_id": 5,
+      "audioUrl": "https://drive.google.com/file/d/11CnrSAFPx3Q8oKczJ-gOqhke79UL_vg7/view?usp=drivesdk",
+      "audioDuration_sec": 60.1,
+      "layers": [
+        {
+          "layer_id": "image_bg_5",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1tC9Dci08uPOCUOJldhfEqKCnUmTMeXM2/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "center"
+          }
+        },
+        {
+          "layer_id": "title_text_5",
+          "type": "text",
+          "content": "Your Secret Weapon: The Smart Editorial Calendar",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_5",
+          "type": "text",
+          "content": "It's more than just a schedule; it's your content brain.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#CCCCCC",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_0_5",
+          "type": "text",
+          "content": "A dynamic system to manage your entire content lifecycle.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_5",
+          "type": "text",
+          "content": "Centralizes ideas, tasks, deadlines, and performance metrics.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 620,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_5",
+          "type": "text",
+          "content": "Designed to bring order to your content chaos.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 690,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_5",
+          "type": "text",
+          "content": "Scalable for growth, flexible for change.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 760,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 8.5,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 6,
+      "slide_id": 6,
+      "audioUrl": "https://drive.google.com/file/d/1DQOIaJsjmlXppLQaSWc4gLCoxGmwTlt-/view?usp=drivesdk",
+      "audioDuration_sec": 70.3,
+      "layers": [
+        {
+          "layer_id": "image_bg_6",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1KGbcl_AVcTgfRAmna_aVWJe1zJjjsDo-/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1.1,
+            "end_zoom": 1,
+            "direction": "topLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_6",
+          "type": "text",
+          "content": "Why Google Sheets? Your Familiar, Free Powerhouse",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_6",
+          "type": "text",
+          "content": "No new software to learn, no extra budget needed.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#CCCCCC",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_0_6",
+          "type": "text",
+          "content": "You already live in G Suite – it's intuitive and accessible.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_6",
+          "type": "text",
+          "content": "It's FREE! Perfect for budget-conscious startups.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 620,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_6",
+          "type": "text",
+          "content": "Highly customizable to fit your unique workflow.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 690,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_6",
+          "type": "text",
+          "content": "Excellent for collaboration and real-time updates.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 760,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 8.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_6",
+          "type": "text",
+          "content": "Powerful formulas and features for automation and insights.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 830,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 10,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 7,
+      "slide_id": 7,
+      "audioUrl": "https://drive.google.com/file/d/1gHeBJdl_pqj0vMGeef6oeT4XjHKpaKBU/view?usp=drivesdk",
+      "audioDuration_sec": 73.1,
+      "layers": [
+        {
+          "layer_id": "image_bg_7",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1aLjUndfzB4rPlBxIAbtJsXOFRwlTmJ9w/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "topRight"
+          }
+        },
+        {
+          "layer_id": "title_text_7",
+          "type": "text",
+          "content": "What a Smart Sheet Can Do For You",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_7",
+          "type": "text",
+          "content": "Practical functionalities that transform your day-to-day.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#CCCCCC",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_0_7",
+          "type": "text",
+          "content": "**Idea Bank:** Capture and organize all your content concepts.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_7",
+          "type": "text",
+          "content": "**Task Management:** Assign owners, set deadlines, track progress.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 620,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_7",
+          "type": "text",
+          "content": "**Content Calendar:** Visualize your publishing schedule at a glance.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 690,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_7",
+          "type": "text",
+          "content": "**Status Tracking:** Know the exact stage of every piece of content.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 760,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 8.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_7",
+          "type": "text",
+          "content": "**Collaboration Hub:** Share, comment, and get approvals seamlessly.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 830,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 10,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_5_7",
+          "type": "text",
+          "content": "**Performance Insights:** Link to analytics for data-driven decisions.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 900,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 11.5,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 8,
+      "slide_id": 8,
+      "audioUrl": "https://drive.google.com/file/d/1BHJsDVPS5WslbQBZs-7wCCBlcUkZd-YF/view?usp=drivesdk",
+      "audioDuration_sec": 62.6,
+      "layers": [
+        {
+          "layer_id": "image_bg_8",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1Yof0WBaOhwYjqrzXntGiR8fwfG_FL4WA/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1.1,
+            "end_zoom": 1,
+            "direction": "bottomLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_8",
+          "type": "text",
+          "content": "From Scattered to Strategic: A Workflow Transformation",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_8",
+          "type": "text",
+          "content": "See the difference a unified system makes.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#CCCCCC",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_0_8",
+          "type": "text",
+          "content": "**Before:** Hunting for ideas across apps → **After:** Centralized, searchable idea backlog.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_8",
+          "type": "text",
+          "content": "**Before:** Guessing content status → **After:** Clear, real-time progress updates.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 620,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_8",
+          "type": "text",
+          "content": "**Before:** Reactive content creation → **After:** Proactive, planned campaigns.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 690,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_8",
+          "type": "text",
+          "content": "**Before:** Overwhelmed & stressed → **After:** Empowered & in control.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 760,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 8.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_8",
+          "type": "text",
+          "content": "**Result:** More efficient content creation, greater impact, less stress.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 830,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 10,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 9,
+      "slide_id": 9,
+      "audioUrl": "https://drive.google.com/file/d/1LPwrU56c2z4f89e1bsF6IyYgc8cNPIDF/view?usp=drivesdk",
+      "audioDuration_sec": 70.3,
+      "layers": [
+        {
+          "layer_id": "image_bg_9",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1E0POh9e2hxbyK-ShY84xPSD3Sf5mzGqD/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "bottomRight"
+          }
+        },
+        {
+          "layer_id": "title_text_9",
+          "type": "text",
+          "content": "Getting Started: Simple Steps to Sanity",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_9",
+          "type": "text",
+          "content": "You don't need to be a Sheets expert to begin.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#CCCCCC",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_0_9",
+          "type": "text",
+          "content": "**Step 1: Start with a Template:** Find a free Google Sheets editorial calendar template online.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_9",
+          "type": "text",
+          "content": "**Step 2: Customize Your Fields:** Add columns for what *you* need (e.g., target audience, CTA, keywords).",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 620,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_9",
+          "type": "text",
+          "content": "**Step 3: Populate Your Content:** Start adding your existing ideas and planned content.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 690,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_9",
+          "type": "text",
+          "content": "**Step 4: Integrate Your Workflow:** Link to Google Docs for content, Google Drive for assets.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 760,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 8.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_9",
+          "type": "text",
+          "content": "**Step 5: Iterate & Improve:** Adjust as you go; it's a living document!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 830,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 10,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 10,
+      "slide_id": 10,
+      "audioUrl": "https://drive.google.com/file/d/1zcWbBsBx5QILF8DaauwULgTMv-VlhiKC/view?usp=drivesdk",
+      "audioDuration_sec": 60.1,
+      "layers": [
+        {
+          "layer_id": "image_bg_10",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1MLIunT1o0SZWs5gy9NUsj37AOpE41QLH/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1.1,
+            "end_zoom": 1,
+            "direction": "center"
+          }
+        },
+        {
+          "layer_id": "title_text_10",
+          "type": "text",
+          "content": "Reclaim Your Time, Amplify Your Impact",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_10",
+          "type": "text",
+          "content": "Your content deserves a smart system.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#CCCCCC",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_0_10",
+          "type": "text",
+          "content": "Stop feeling overwhelmed by content chaos.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_10",
+          "type": "text",
+          "content": "Gain clarity, control, and confidence in your content strategy.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 620,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_10",
+          "type": "text",
+          "content": "Publish more consistently and strategically.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 690,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_10",
+          "type": "text",
+          "content": "Free up valuable time for creative work and growth initiatives.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 760,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 8.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_10",
+          "type": "text",
+          "content": "Transform your content from a chore into a powerful growth engine.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 830,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 10,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 11,
+      "slide_id": 11,
+      "audioUrl": "https://drive.google.com/file/d/1DS0yON62xvPgkZ4xmQbUaRwzRmW8YzM8/view?usp=drivesdk",
+      "audioDuration_sec": 60.1,
+      "layers": [
+        {
+          "layer_id": "image_bg_11",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1i-1L0hrxWMCizYYz3_Ae9-6WX70x-saj/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "topLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_11",
+          "type": "text",
+          "content": "Ready to Transform Your Workflow?",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_11",
+          "type": "text",
+          "content": "Take the first step towards content sanity today.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#CCCCCC",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_0_11",
+          "type": "text",
+          "content": "Explore free Google Sheets editorial calendar templates.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_11",
+          "type": "text",
+          "content": "Start building your own simple version this week.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 620,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_11",
+          "type": "text",
+          "content": "Imagine the time you'll save and the impact you'll make!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 690,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 12,
+      "slide_id": 12,
+      "audioUrl": "https://drive.google.com/file/d/1MgVbNeW5zgIwMNMvu_nrIk6QxcoL17yh/view?usp=drivesdk",
+      "audioDuration_sec": 38.6,
+      "layers": [
+        {
+          "layer_id": "image_bg_12",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1YC7uCK1VyFHKq-MRGwUsVhASHvfIDTXy/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1.1,
+            "end_zoom": 1,
+            "direction": "topRight"
+          }
+        },
+        {
+          "layer_id": "title_text_12",
+          "type": "text",
+          "content": "Questions & Discussion",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "subtitle_text_12",
+          "type": "text",
+          "content": "Let's talk about streamlining YOUR content.",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#CCCCCC",
+          "position": {
+            "x": 960,
+            "y": 400,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 2.5,
+            "duration_sec": 1.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_0_12",
+          "type": "text",
+          "content": "What challenges are you facing right now?",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 550,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 4,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_12",
+          "type": "text",
+          "content": "How can a smart editorial calendar help your specific needs?",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#EEEEEE",
+          "position": {
+            "x": 200,
+            "y": 620,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5.5,
+            "duration_sec": 1
+          }
+        }
+      ]
+    }
+  ]
+}
