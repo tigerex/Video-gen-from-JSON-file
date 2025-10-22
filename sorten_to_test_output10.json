@@ -26,7 +26,7 @@
           "layer_id": "title_text_1",
           "type": "text",
           "content": "Your Content Workflow is Broken",
-          "font": "Merriweather",
+          "font": "Arial",
           "size": 72,
           "color": "#FFFFFF",
           "position": {

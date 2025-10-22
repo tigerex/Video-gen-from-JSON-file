@@ -30,7 +30,7 @@ from moviepy import (
 )
 from moviepy.video.fx.FadeIn import FadeIn
 from moviepy.video.fx.FadeOut import FadeOut
-
+# from moviepy.audio import fx
 import gdown
 import requests
 from dotenv import load_dotenv
@@ -397,44 +397,52 @@ def render_scene(scene: Scene, width: int, height: int, api_key: str, temp_dir: 
             elif layer.type == "text" and (layer.content or "").strip():
                 font_path = get_font_path(layer.font, api_key)
                 try:
-                    # --- Step 1: Create the TextClip ---
                     text_color = layer.color or "white"
+                    stroke_width = 2 # You can adjust the thickness of the stroke here
+                    
+                    # --- PADDING FIX: Step 1: Measure the text WITH the stroke ---
+                    temp_clip = TextClip(
+                        text=layer.content,
+                        font=font_path,
+                        font_size=layer.size or 40,
+                        color=text_color,
+                        stroke_color='black',
+                        stroke_width=stroke_width,
+                        method="label"
+                    )
+                    text_w, text_h = temp_clip.size
+                    temp_clip.close()
+
+                    # --- PADDING FIX: Step 2: Define a new, taller canvas ---
+                    vertical_padding = 46
+                    padded_canvas_size = (text_w, text_h + vertical_padding)
+
+                    # --- PADDING FIX: Step 3: Re-render the text on the padded canvas WITH the stroke ---
                     txt_clip = TextClip(
                         text=layer.content,
                         font=font_path,
                         font_size=layer.size or 40,
                         color=text_color,
-                        # --- ADDED: Fixes Clipping Issue ---
-                        stroke_color=text_color,
-                        # stroke_width=1, # Set a small stroke width (1-2 is usually enough)
-                        # -----------------------------------
-                        size=(width, None), # Allow horizontal wrapping
-                        method="caption",
+                        stroke_color='black',
+                        stroke_width=stroke_width,
+                        size=padded_canvas_size,
+                        method="label"
                     )
                     
-                    # --- Step 2: Calculate Position Manually ---
+                    # --- Step 4: Calculate Position Manually ---
                     if layer.position:
-                        # Get the actual rendered size of the text clip
                         clip_w, clip_h = txt_clip.size
-                        
-                        # Start with the user's desired coordinates
                         pos_x, pos_y = layer.position.x, layer.position.y
                         anchor = (layer.position.anchor or "top_left").lower()
 
-                        # Adjust coordinates based on the anchor
-                        # Horizontal adjustment
-                        if "center" in anchor:
-                            pos_x -= clip_w / 2
-                        elif "right" in anchor:
-                            pos_x -= clip_w
+                        if "center" in anchor: pos_x -= clip_w / 2
+                        elif "right" in anchor: pos_x -= clip_w
                         
-                        # Vertical adjustment
-                        if "center" in anchor and "top" not in anchor and "bottom" not in anchor: # Middle-center
+                        if "center" in anchor and "top" not in anchor and "bottom" not in anchor:
                              pos_y -= clip_h / 2
                         elif "bottom" in anchor:
                             pos_y -= clip_h
 
-                        # --- Step 3: Apply the final calculated position ---
                         txt_clip = txt_clip.with_position((pos_x, pos_y))
 
                     clip_to_add = txt_clip
@@ -545,7 +553,15 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
     print("🎞️ Concatenating scenes...")
     final_clips = [] # Initialize empty list
     try:
-        final_clips = [VideoFileClip(p) for p in sorted(scene_outputs)]
+        # Define a key to extract the number from the filename for proper sorting
+        def sort_key(filepath):
+            match = re.search(r'scene_(\d+)\.mp4', os.path.basename(filepath))
+            return int(match.group(1)) if match else 0
+        
+        sorted_outputs = sorted(scene_outputs, key=sort_key)
+        final_clips = [VideoFileClip(p) for p in sorted_outputs]
+        # --- END FIX ---
+        
         final = concatenate_videoclips(final_clips, method="compose")
 
         temp_final_path = os.path.join(temp_dir, "final_temp.mp4")

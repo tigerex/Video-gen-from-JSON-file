@@ -1,0 +1,45 @@
+{
+    "start_time": "2025-10-21T22:10:32.076933",
+    "system": "Windows-10-10.0.26100-SP0",
+    "cpu_count": 16,
+    "status": "completed",
+    "errors": [],
+    "warnings": [],
+    "scenes": {
+        "scene_1": {
+            "slide_id": 1,
+            "duration_sec": 65,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_2": {
+            "slide_id": 2,
+            "duration_sec": 65.1,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_3": {
+            "slide_id": 3,
+            "duration_sec": 65.6,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        }
+    },
+    "asset_count": 8,
+    "end_time": "2025-10-21T22:25:37.621504",
+    "elapsed_seconds": 898.02,
+    "avg_scene_seconds": 0.0,
+    "video_metadata": {
+        "title": "Your Content Workflow is Broken: Ditch the Scattered Docs for a Smart Editorial Calendar in Google Sheets",
+        "resolution": "1920x1080",
+        "fps": 30,
+        "scene_count": 3
+    },
+    "hardware": {
+        "cpu_percent": 7.9,
+        "memory_used_mb": 10513.93,
+        "memory_total_mb": 16008.93,
+        "gpu_info": "No GPU info (nvidia-smi not found)"
+    },
+    "final_video_path": "C:\\Minh\\workplace\\Internship\\results\\final_output_2025-10-21_22-10-32.mp4"
+}
