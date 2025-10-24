@@ -1,0 +1,302 @@
+{
+  "videoMetadata": {
+    "title": "Scene-by-Scene Effect Test (Corrected)",
+    "resolution": "1920x1080",
+    "fps": 30
+  },
+  "scenes": [
+    {
+      "scene_id": 1,
+      "slide_id": 1,
+      "audioUrl": null,
+      "audioDuration_sec": 7,
+      "layers": [
+        {
+          "layer_id": "bg_1",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1Sg0tfggO4bpYo_xWCwAV0Z4jtbs6MeYL/view?usp=drivesdk",
+          "animation": { "type": "KenBurns", "start_zoom": 1.0, "end_zoom": 1.05 }
+        },
+        {
+          "layer_id": "title_1",
+          "type": "text",
+          "content": "Animation: slideIn",
+          "font": "Merriweather", "size": 72, "color": "#FFFFFF",
+          "position": { "x": 960, "y": 200, "anchor": "center" },
+          "animation": { "type": "fadeIn", "startTime_sec": 0.5, "duration_sec": 1 }
+        },
+        {
+          "layer_id": "text_1",
+          "type": "text",
+          "content": "Lorem ipsum dolor sit amet.",
+          "font": "Open Sans", "size": 48, "color": "#EEEEEE",
+          "position": { "x": 960, "y": 540, "anchor": "center" },
+          "animation": {
+            "type": "slideIn",
+            "startTime_sec": 1,
+            "duration_sec": 2,
+            "direction": "left"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 2,
+      "slide_id": 2,
+      "audioUrl": null,
+      "audioDuration_sec": 7,
+      "layers": [
+        {
+          "layer_id": "bg_2",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1Sg0tfggO4bpYo_xWCwAV0Z4jtbs6MeYL/view?usp=drivesdk",
+          "animation": { "type": "KenBurns", "start_zoom": 1.05, "end_zoom": 1.1 }
+        },
+        {
+          "layer_id": "title_2",
+          "type": "text",
+          "content": "Animation: slideOut",
+          "font": "Merriweather", "size": 72, "color": "#FFFFFF",
+          "position": { "x": 960, "y": 200, "anchor": "center" },
+          "animation": { "type": "fadeIn", "startTime_sec": 0.5, "duration_sec": 1 }
+        },
+        {
+          "layer_id": "text_2",
+          "type": "text",
+          "content": "Lorem ipsum dolor sit amet.",
+          "font": "Open Sans", "size": 48, "color": "#EEEEEE",
+          "position": { "x": 960, "y": 540, "anchor": "center" },
+          "animation": {
+            "type": "slideOut",
+            "startTime_sec": 4,
+            "duration_sec": 2,
+            "direction": "bottom"
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 3,
+      "slide_id": 3,
+      "audioUrl": null,
+      "audioDuration_sec": 7,
+      "layers": [
+        {
+          "layer_id": "bg_3",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1Sg0tfggO4bpYo_xWCwAV0Z4jtbs6MeYL/view?usp=drivesdk",
+          "animation": { "type": "KenBurns", "start_zoom": 1.1, "end_zoom": 1.15 }
+        },
+        {
+          "layer_id": "title_3",
+          "type": "text",
+          "content": "Animation: crossFadeIn",
+          "font": "Merriweather", "size": 72, "color": "#FFFFFF",
+          "position": { "x": 960, "y": 200, "anchor": "center" },
+          "animation": { "type": "fadeIn", "startTime_sec": 0.5, "duration_sec": 1 }
+        },
+        {
+          "layer_id": "text_3",
+          "type": "text",
+          "content": "Lorem ipsum dolor sit amet.",
+          "font": "Open Sans", "size": 48, "color": "#EEEEEE",
+          "position": { "x": 960, "y": 540, "anchor": "center" },
+          "animation": {
+            "type": "crossFadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 3
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 4,
+      "slide_id": 4,
+      "audioUrl": null,
+      "audioDuration_sec": 7,
+      "layers": [
+        {
+          "layer_id": "bg_4",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1Sg0tfggO4bpYo_xWCwAV0Z4jtbs6MeYL/view?usp=drivesdk",
+          "animation": { "type": "KenBurns", "start_zoom": 1.0, "end_zoom": 1.05 }
+        },
+        {
+          "layer_id": "title_4",
+          "type": "text",
+          "content": "Animation: resize",
+          "font": "Merriweather", "size": 72, "color": "#FFFFFF",
+          "position": { "x": 960, "y": 200, "anchor": "center" },
+          "animation": { "type": "fadeIn", "startTime_sec": 0.5, "duration_sec": 1 }
+        },
+        {
+          "layer_id": "text_4",
+          "type": "text",
+          "content": "Lorem ipsum dolor sit amet.",
+          "font": "Open Sans", "size": 48, "color": "#EEEEEE",
+          "position": { "x": 960, "y": 540, "anchor": "center" },
+          "animation": {
+            "type": "resize",
+            "startTime_sec": 1,
+            "scale": 1.5
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 5,
+      "slide_id": 5,
+      "audioUrl": null,
+      "audioDuration_sec": 7,
+      "layers": [
+        {
+          "layer_id": "bg_5",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1Sg0tfggO4bpYo_xWCwAV0Z4jtbs6MeYL/view?usp=drivesdk",
+          "animation": { "type": "KenBurns", "start_zoom": 1.05, "end_zoom": 1.1 },
+          "filter": { "type": "blackAndWhite" }
+        },
+        {
+          "layer_id": "title_5",
+          "type": "text",
+          "content": "Filter: blackAndWhite",
+          "font": "Merriweather", "size": 72, "color": "#FFFFFF",
+          "position": { "x": 960, "y": 200, "anchor": "center" },
+          "animation": { "type": "fadeIn", "startTime_sec": 0.5, "duration_sec": 1 }
+        },
+        {
+          "layer_id": "text_5",
+          "type": "text",
+          "content": "Lorem ipsum dolor sit amet.",
+          "font": "Open Sans", "size": 48, "color": "#FFFFFF",
+          "position": { "x": 960, "y": 540, "anchor": "center" },
+          "animation": { "type": "fadeIn", "startTime_sec": 1, "duration_sec": 2 }
+        }
+      ]
+    },
+    {
+      "scene_id": 6,
+      "slide_id": 6,
+      "audioUrl": null,
+      "audioDuration_sec": 7,
+      "layers": [
+        {
+          "layer_id": "bg_6",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1Sg0tfggO4bpYo_xWCwAV0Z4jtbs6MeYL/view?usp=drivesdk",
+          "animation": { "type": "KenBurns", "start_zoom": 1.1, "end_zoom": 1.15 },
+          "filter": { "type": "invertColors" }
+        },
+        {
+          "layer_id": "title_6",
+          "type": "text",
+          "content": "Filter: invertColors",
+          "font": "Merriweather", "size": 72, "color": "#FFFFFF",
+          "position": { "x": 960, "y": 200, "anchor": "center" },
+          "animation": { "type": "fadeIn", "startTime_sec": 0.5, "duration_sec": 1 }
+        },
+        {
+          "layer_id": "text_6",
+          "type": "text",
+          "content": "Lorem ipsum dolor sit amet.",
+          "font": "Open Sans", "size": 48, "color": "#FFFFFF",
+          "position": { "x": 960, "y": 540, "anchor": "center" },
+          "animation": { "type": "fadeIn", "startTime_sec": 1, "duration_sec": 2 }
+        }
+      ]
+    },
+    {
+      "scene_id": 7,
+      "slide_id": 7,
+      "audioUrl": null,
+      "audioDuration_sec": 7,
+      "layers": [
+        {
+          "layer_id": "bg_7",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1Sg0tfggO4bpYo_xWCwAV0Z4jtbs6MeYL/view?usp=drivesdk",
+          "animation": { "type": "KenBurns", "start_zoom": 1.0, "end_zoom": 1.05 },
+          "filter": { "type": "lumContrast", "lum": 50, "contrast": -2 }
+        },
+        {
+          "layer_id": "title_7",
+          "type": "text",
+          "content": "Filter: lumContrast",
+          "font": "Merriweather", "size": 72, "color": "#FFFFFF",
+          "position": { "x": 960, "y": 200, "anchor": "center" },
+          "animation": { "type": "fadeIn", "startTime_sec": 0.5, "duration_sec": 1 }
+        },
+        {
+          "layer_id": "text_7",
+          "type": "text",
+          "content": "Lorem ipsum dolor sit amet.",
+          "font": "Open Sans", "size": 48, "color": "#FFFFFF",
+          "position": { "x": 960, "y": 540, "anchor": "center" },
+          "animation": { "type": "fadeIn", "startTime_sec": 1, "duration_sec": 2 }
+        }
+      ]
+    },
+    {
+      "scene_id": 8,
+      "slide_id": 8,
+      "audioUrl": null,
+      "audioDuration_sec": 7,
+      "layers": [
+        {
+          "layer_id": "bg_8",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1Sg0tfggO4bpYo_xWCwAV0Z4jtbs6MeYL/view?usp=drivesdk",
+          "animation": { "type": "KenBurns", "start_zoom": 1.05, "end_zoom": 1.1 },
+          "filter": { "type": "multiplyColor", "color": "#FFD700" }
+        },
+        {
+          "layer_id": "title_8",
+          "type": "text",
+          "content": "Filter: multiplyColor",
+          "font": "Merriweather", "size": 72, "color": "#FFFFFF",
+          "position": { "x": 960, "y": 200, "anchor": "center" },
+          "animation": { "type": "fadeIn", "startTime_sec": 0.5, "duration_sec": 1 }
+        },
+        {
+          "layer_id": "text_8",
+          "type": "text",
+          "content": "Lorem ipsum dolor sit amet.",
+          "font": "Open Sans", "size": 48, "color": "#FFFFFF",
+          "position": { "x": 960, "y": 540, "anchor": "center" },
+          "animation": { "type": "fadeIn", "startTime_sec": 1, "duration_sec": 2 }
+        }
+      ]
+    },
+    {
+      "scene_id": 9,
+      "slide_id": 9,
+      "audioUrl": null,
+      "audioDuration_sec": 7,
+      "layers": [
+        {
+          "layer_id": "bg_9",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1Sg0tfggO4bpYo_xWCwAV0Z4jtbs6MeYL/view?usp=drivesdk",
+          "animation": { "type": "KenBurns", "start_zoom": 1.1, "end_zoom": 1.15 },
+          "filter": { "type": "blink", "on_duration": 0.8, "off_duration": 0.4 }
+        },
+        {
+          "layer_id": "title_9",
+          "type": "text",
+          "content": "Filter: blink",
+          "font": "Merriweather", "size": 72, "color": "#FFFFFF",
+          "position": { "x": 960, "y": 200, "anchor": "center" },
+          "animation": { "type": "fadeIn", "startTime_sec": 0.5, "duration_sec": 1 }
+        },
+        {
+          "layer_id": "text_9",
+          "type": "text",
+          "content": "Lorem ipsum dolor sit amet.",
+          "font": "Open Sans", "size": 48, "color": "#FFFFFF",
+          "position": { "x": 960, "y": 540, "anchor": "center" },
+          "animation": { "type": "fadeIn", "startTime_sec": 1, "duration_sec": 2 }
+        }
+      ]
+    }
+  ]
+}

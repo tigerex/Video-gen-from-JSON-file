@@ -1,0 +1,33 @@
+{
+    "start_time": "2025-10-25T02:12:26.054232",
+    "system": "Windows-10-10.0.26100-SP0",
+    "cpu_count": 16,
+    "status": "completed",
+    "errors": [],
+    "warnings": [],
+    "scenes": {
+        "scene_1": {
+            "slide_id": 1,
+            "duration_sec": 60,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        }
+    },
+    "asset_count": 3,
+    "end_time": "2025-10-25T02:20:36.398770",
+    "elapsed_seconds": 487.9,
+    "avg_scene_seconds": 0.0,
+    "video_metadata": {
+        "title": "Test All Animations and Filters",
+        "resolution": "1920x1080",
+        "fps": 30,
+        "scene_count": 1
+    },
+    "hardware": {
+        "cpu_percent": 5.2,
+        "memory_used_mb": 10956.37,
+        "memory_total_mb": 16008.93,
+        "gpu_info": "No GPU info (nvidia-smi not found)"
+    },
+    "final_video_path": "C:\\Minh\\workplace\\Internship\\results\\final_output_2025-10-25_02-12-26.mp4"
+}

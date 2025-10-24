@@ -33,7 +33,7 @@ from moviepy import (
 from moviepy.video.fx import FadeIn, FadeOut, CrossFadeIn, CrossFadeOut, Scroll, SlideIn ,SlideOut, MultiplySpeed, Resize
 
 # filters
-from moviepy.video.fx import LumContrast, Painting, Painting, InvertColors, BlackAndWhite, Blink, MultiplyColor
+from moviepy.video.fx import LumContrast, Painting, InvertColors, BlackAndWhite, Blink, MultiplyColor
 
 
 import gdown
@@ -51,6 +51,23 @@ class Animation:
     start_zoom: Optional[float] = None
     end_zoom: Optional[float] = None
     direction: Optional[str] = None
+    factor: Optional[float] = None  # For MultiplySpeed
+    width: Optional[int] = None     # For Resize
+    height: Optional[int] = None    # For Resize
+    scale: Optional[float] = None   # For Resize
+
+# NEW: Dataclass for filters
+@dataclass
+class Filter:
+    type: str
+    lum: Optional[int] = None
+    contrast: Optional[int] = None
+    contrast_thr: Optional[int] = None
+    saturation: Optional[float] = None
+    black: Optional[float] = None
+    on_duration: Optional[float] = None
+    off_duration: Optional[float] = None
+    color: Optional[str] = None
 
 @dataclass
 class Position:
@@ -69,6 +86,7 @@ class Layer:
     color: Optional[str] = None
     position: Optional[Position] = None
     animation: Optional[Animation] = None
+    filter: Optional[Filter] = None
 
 @dataclass
 class Scene:
@@ -267,28 +285,58 @@ def get_font_path(font_name: Optional[str], api_key: str) -> str:
     return fetch_google_font_via_api(font_name, api_key) if font_name else fetch_fallback_font(api_key)
 
 # ===============================
-# Animation helpers
+# Animation and Filter helpers
 # ===============================
+# MODIFIED: Expanded this function with new animations
 def apply_animation_to_clip(clip, layer: Layer, safe_duration: float, canvas_size: Tuple[int, int]):
     if not layer.animation:
         return clip.with_duration(safe_duration)
+    
     anim = layer.animation
-    start = anim.startTime_sec or 0.0
-    effect_duration = float(anim.duration_sec) if anim.duration_sec else 0.0
-    clip = clip.with_start(start).with_duration(safe_duration - start)
     anim_type = (anim.type or "").lower()
+    start_time = anim.startTime_sec or 0.0
+    effect_duration = float(anim.duration_sec) if anim.duration_sec is not None else 0.0
+
+    # Define exit animations which need special handling
+    exit_animations = ["fadeout", "slideout", "crossfadeout"]
+
+    if anim_type in exit_animations:
+        # For exit animations, the clip must be visible from t=0.
+        # Its total duration is the time until the animation *finishes*.
+        total_duration = min(start_time + effect_duration, safe_duration)
+        clip = clip.with_duration(total_duration)
+
+        # MoviePy applies these effects relative to the clip's end, which is now correct.
+        if anim_type == "slideout":
+            clip = clip.with_effects([SlideOut(duration=effect_duration, side=anim.direction or 'left')])
+        elif anim_type == "fadeout":
+            clip = clip.with_effects([FadeOut(duration=effect_duration)])
+        elif anim_type == "crossfadeout":
+            clip = clip.with_effects([CrossFadeOut(duration=effect_duration)])
+        
+        return clip
+
+    # For all other animations (entrance, continuous), the original logic works.
+    clip = clip.with_start(start_time).with_duration(safe_duration - start_time)
+    
     if anim_type == "fadein":
         clip = clip.with_effects([FadeIn(duration=effect_duration)])
-    elif anim_type == "fadeout":
-        clip = clip.with_effects([FadeOut(duration=effect_duration)])
-    elif anim_type == "slideinfromleft":
+    elif anim_type == "crossfadein":
+        clip = clip.with_effects([CrossFadeIn(duration=effect_duration)])
+    elif anim_type == "slidein":
+        clip = clip.with_effects([SlideIn(duration=effect_duration, side=anim.direction or 'left')])
+    elif anim_type == "multiplyspeed":
+        clip = clip.with_effects([MultiplySpeed(factor=anim.factor or 2.0, final_duration=effect_duration)])
+    elif anim_type == "resize":
+        new_size = {}
+        if anim.width: new_size['width'] = anim.width
+        if anim.height: new_size['height'] = anim.height
+        if anim.scale: new_size['width'] = int(clip.w * anim.scale) # scale overrides
+        clip = clip.with_effects([Resize(**new_size)])
+    elif anim_type == "slideinfromleft": # Kept for backward compatibility
         canvas_w, canvas_h = canvas_size
-
-        # --- FIX: Handle case where clip.w might be None (e.g., failed TextClip) ---
         clip_w = clip.w if clip.w is not None else 0
         clip_h = clip.h if clip.h is not None else 0
-
-        # Use the fixed clip_w and clip_h here
         final_x = layer.position.x if layer.position else (canvas_w - clip_w) / 2
         final_y = layer.position.y if layer.position else (canvas_h - clip_h) / 2
         start_x = -clip_w
@@ -297,6 +345,7 @@ def apply_animation_to_clip(clip, layer: Layer, safe_duration: float, canvas_siz
             x = start_x + progress * (final_x - start_x)
             return (x, final_y)
         clip = clip.with_position(pos_fn)
+        
     return clip
 
 def apply_kenburns_to_image(clip, anim: Animation, safe_duration: float):
@@ -307,9 +356,46 @@ def apply_kenburns_to_image(clip, anim: Animation, safe_duration: float):
         return start_zoom + (end_zoom - start_zoom) * progress
     return clip.resized(scale_fn)
 
+# NEW: Function to apply filters
+def apply_filter_to_clip(clip, filter_obj: Filter):
+    if not filter_obj or not filter_obj.type:
+        return clip
+
+    filter_type = filter_obj.type.lower()
+    
+    if filter_type == "lumcontrast":
+        params = {k: v for k, v in {
+            "lum": filter_obj.lum,
+            "contrast": filter_obj.contrast,
+            "contrast_thr": filter_obj.contrast_thr
+        }.items() if v is not None}
+        return clip.with_effects([LumContrast(**params)])
+    elif filter_type == "painting":
+        params = {k: v for k, v in {
+            "saturation": filter_obj.saturation,
+            "black": filter_obj.black
+        }.items() if v is not None}
+        return clip.with_effects([Painting(**params)])
+    elif filter_type == "invertcolors":
+        return clip.with_effects([InvertColors()])
+    elif filter_type == "blackandwhite":
+        return clip.with_effects([BlackAndWhite()])
+    elif filter_type == "blink":
+        params = {k: v for k, v in {
+            "on_duration": filter_obj.on_duration,
+            "off_duration": filter_obj.off_duration
+        }.items() if v is not None}
+        return clip.with_effects([Blink( **params)])
+    elif filter_type == "multiplycolor":
+        if filter_obj.color:
+            return clip.with_effects([MultiplyColor(float(filter_obj.color))])
+            
+    return clip
+
 # ===============================
 # JSON loader
 # ===============================
+# MODIFIED: Updated to load the new 'filter' object
 def load_project_from_json(json_path: str) -> VideoProject:
     with open(json_path, "r") as f:
         data = json.load(f)
@@ -318,12 +404,16 @@ def load_project_from_json(json_path: str) -> VideoProject:
     for s in data["scenes"]:
         layers = []
         for l in s["layers"]:
-            position = Position(**l["position"]) if "position" in l else None
-            animation = Animation(**l["animation"]) if "animation" in l else None
-            # create Layer with proper nested objects
+            position = Position(**l["position"]) if "position" in l and l["position"] else None
+            animation = Animation(**l["animation"]) if "animation" in l and l["animation"] else None
+            # NEW: Load filter object
+            filter_obj = Filter(**l["filter"]) if "filter" in l and l["filter"] else None
+            
             layer_dict = {**l}
             layer_dict["position"] = position
             layer_dict["animation"] = animation
+            # NEW: Add filter to layer dict
+            layer_dict["filter"] = filter_obj
             layers.append(Layer(**layer_dict))
         scenes.append(Scene(**{**s, "layers": layers}))
     return VideoProject(metadata=metadata, scenes=scenes)
@@ -358,6 +448,7 @@ def parallel_download_assets(project: VideoProject, api_key: str):
 # ===============================
 # Scene rendering (worker processes)
 # ===============================
+# MODIFIED: Added filter application step
 def render_scene(scene: Scene, width: int, height: int, api_key: str, temp_dir: str):
     import os
     from moviepy import CompositeVideoClip, ImageClip, AudioFileClip, TextClip, ColorClip
@@ -405,36 +496,22 @@ def render_scene(scene: Scene, width: int, height: int, api_key: str, temp_dir: 
                     text_color = layer.color or "white"
                     stroke_width = 2 # You can adjust the thickness of the stroke here
                     
-                    # --- PADDING FIX: Step 1: Measure the text WITH the stroke ---
                     temp_clip = TextClip(
-                        text=layer.content,
-                        font=font_path,
-                        font_size=layer.size or 40,
-                        color=text_color,
-                        stroke_color='black',
-                        stroke_width=stroke_width,
-                        method="label"
+                        text=layer.content, font=font_path, font_size=layer.size or 40,
+                        color=text_color, stroke_color='black', stroke_width=stroke_width, method="label"
                     )
                     text_w, text_h = temp_clip.size
                     temp_clip.close()
 
-                    # --- PADDING FIX: Step 2: Define a new, taller canvas ---
                     vertical_padding = 46
                     padded_canvas_size = (text_w, text_h + vertical_padding)
 
-                    # --- PADDING FIX: Step 3: Re-render the text on the padded canvas WITH the stroke ---
                     txt_clip = TextClip(
-                        text=layer.content,
-                        font=font_path,
-                        font_size=layer.size or 40,
-                        color=text_color,
-                        stroke_color='black',
-                        stroke_width=stroke_width,
-                        size=padded_canvas_size,
-                        method="label"
+                        text=layer.content, font=font_path, font_size=layer.size or 40,
+                        color=text_color, stroke_color='black', stroke_width=stroke_width,
+                        size=padded_canvas_size, method="label"
                     )
                     
-                    # --- Step 4: Calculate Position Manually ---
                     if layer.position:
                         clip_w, clip_h = txt_clip.size
                         pos_x, pos_y = layer.position.x, layer.position.y
@@ -456,9 +533,14 @@ def render_scene(scene: Scene, width: int, height: int, api_key: str, temp_dir: 
                     print(f"[Warning] TextClip creation failed for '{layer.content[:30]}': {e}")
                     continue
 
-            # Apply animations and add the final clip to the list
             if clip_to_add:
+                # Apply animations
                 final_layer_clip = apply_animation_to_clip(clip_to_add, layer, safe_duration, (width, height))
+                
+                # NEW: Apply filters
+                if layer.filter:
+                    final_layer_clip = apply_filter_to_clip(final_layer_clip, layer.filter)
+
                 layer_clips.append(final_layer_clip)
 
         except Exception as e:
@@ -565,7 +647,6 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
         
         sorted_outputs = sorted(scene_outputs, key=sort_key)
         final_clips = [VideoFileClip(p) for p in sorted_outputs]
-        # --- END FIX ---
         
         final = concatenate_videoclips(final_clips, method="compose")
 
@@ -574,7 +655,7 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
             temp_final_path,
             codec="libx264",
             fps=project.metadata.fps,
-            audio_codec="aac" # Removed threads="auto"
+            audio_codec="aac"
         )
         final.close() # Close the concatenated clip
     finally:
@@ -661,6 +742,7 @@ def main():
     parser = argparse.ArgumentParser(description="Render video from JSON (parallel by default).")
     parser.add_argument("json_path", nargs="?", default="sorten_to_test_output10.json")
     parser.add_argument("--no-parallel", action="store_true", help="Disable parallel mode.")
+
     args = parser.parse_args()
 
     load_dotenv()
