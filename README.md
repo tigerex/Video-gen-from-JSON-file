@@ -13,7 +13,7 @@ This project converts scene descriptions (JSON) into stitched videos, with per-s
 3. Concatenating scene clips into a final video.
 4. Providing a Tkinter-based UI (`UI_moviePy.py`) to preview, configure, and run renders, plus per-scene logging and emergency controls (SCRAM).
 
-This repository uses **MoviePy 2.x** APIs and aims to be robust against partial failures (fallback scenes, logging) while keeping a simple workflow for non-technical users.
+This repository uses **MoviePy 2.2** APIs and aims to be robust against partial failures (fallback scenes, logging) while keeping a simple workflow for non-technical users.
 
 ---
 
@@ -92,11 +92,11 @@ python UI_moviePy.py
 Use the UI to import your JSON (default file `scene_composition_agent_output.json`), download assets, tweak resolution/fps, and start rendering. You can view per-scene logs in the UI and use **Stop** or **SCRAM** controls as needed.
 
 ### CLI (developer)
-There is also a CLI entry point in `final_solution.py` (single-file runner):
+There is also a CLI entry point in `final_solution_ver.py` (single-file runner):
 ```bash
-python final_solution.py path/to/project.json
+python final_solution_ver.py path/to/project.json
 ```
-> Note: The UI currently depends on `final_solution` functions for backend orchestration. If you prefer CLI-only workflows, `final_solution.py` contains the core pipeline functions (download, render scenes, concatenate).
+> Note: The UI currently depends on `final_solution_ver2` functions for backend orchestration. If you prefer CLI-only workflows, `final_solution_ver2.py` contains the core pipeline functions (download, render scenes, concatenate). As of 25/10/2025, the UI need rework since the core `final_solution_ver2` got some updates and changes. Expect bugs on the UI!!!!!!!!!!
 
 ---
 
@@ -111,7 +111,7 @@ python final_solution.py path/to/project.json
 ├─ /results/                    # rendered final videos and logs
 ├─ /temp/                       # temporary scene outputs (auto-clean recommended)
 ├─ UI_moviePy.py                # Tkinter-based UI (main entrypoint for now)
-├─ final_solution.py            # Core rendering backend used by UI and CLI
+├─ final_solution_ver2.py            # Core rendering backend used by UI and CLI
 ├─ scene_composition_agent_output.json  # example/default JSON input
 ├─ requirements.txt             # Python package dependencies
 └─ README.md                    # (this file)

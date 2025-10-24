@@ -17,29 +17,7 @@
 |-------|--------------|--------------------|
 | **1. Text clipping / cutoff** | Text layers (`TextClip`) sometimes lose ascenders (tops of “T”, “h”) or descenders (bottoms of “g”, “y”). | • Use `method="caption"` with vertical padding or `size=(width, None)` + `align='center'`. <br>• Apply `.resize(newsize=(width, None))` *after* setting duration to preserve font box. |
 | **2. Off-centered or truncated captions** | Center alignment varies by font metrics and image scaling. | • Use anchor-based positioning (`position.anchor='center'`), or dynamically compute `(canvas_w - text.w)/2` and `(canvas_h - text.h)/2`. <br>• Measure text bounding box after creation for precise placement. |
-| **3. Font fallback inconsistency** | Missing fonts cause silent fallback to DejaVuSans with different spacing. | • Cache verified Google Fonts per project.<br>• Log font substitutions clearly. |
-| **4. Multi-line wrapping limits** | Long text lines overflow at smaller resolutions. | • Enable dynamic font resizing: detect text width and reduce `font_size` accordingly.<br>• Add auto word-wrapping for long captions. |
-
----
-
-### 🎞️ Animation & Visual Layer Effects
-
-| Issue | Description | Suggested Solution |
-|-------|--------------|--------------------|
-| **1. Limited animation types** | Currently supports basic `fadein`, `fadeout`, `slideinfromleft`, `kenburns`. | • Add: `slideinfromright`, `slideup`, `slidedown`, `zoom`, `rotate`, `pulse`, `pan`. <br>• Define animation presets in JSON (`"animation": {"type": "slideup", "easing": "easeInOut"}`). |
-| **2. Easing and timing** | All motion is linear and abrupt. | • Use easing functions (e.g., `tween` or custom lambda easing curves).<br>• Add `startDelay`, `repeat`, `bounce` options in `Animation` dataclass. |
-| **3. Layer ordering ambiguity** | Layers are rendered in listed order; missing `z-index` control may cause unexpected overlaps. | • Add `z_index` to `Layer` class.<br>• Sort layers before composition: `sorted(scene.layers, key=lambda l: l.z_index)`. |
-| **4. Transition between scenes** | Scene-to-scene transitions are abrupt cuts. | • Add crossfade between final seconds of scene N and start of scene N+1.<br>• Implement via MoviePy `concatenate_videoclips(..., method="compose", padding=-fade_duration)`. |
-
----
-
-### 🔊 Audio Handling
-
-| Issue | Description | Suggested Solution |
-|-------|--------------|--------------------|
-| **1. Mismatched audio duration** | Some audio clips are slightly longer than their scene video duration, causing truncation warnings. | • Always call `.subclipped(0, safe_duration)` or `.audio.set_duration(scene_duration)` before attach. |
-| **2. No background music or crossfade** | Each scene uses only its voice/audio layer. | • Add an optional global background track with fade in/out per scene. |
-| **3. Missing normalization** | Audio levels vary drastically between scenes. | • Normalize RMS before concatenation using `AudioClip.volumex()` or ffmpeg filters. |
+| **3. Multi-line wrapping limits** | Long text lines overflow at smaller resolutions. | • Enable dynamic font resizing: detect text width and reduce `font_size` accordingly.<br>• Add auto word-wrapping for long captions. |
 
 ---
 
