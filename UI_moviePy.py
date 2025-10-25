@@ -56,9 +56,9 @@ from moviepy import VideoFileClip, concatenate_videoclips, ColorClip
 from dotenv import load_dotenv
 load_dotenv()
 
-# Try to import backend functions from final_solution.py
+# Try to import backend functions from final_solution_ver2.py
 try:
-    from final_solution import (
+    from final_solution_ver2 import (
         load_project_from_json,
         parallel_download_assets,
         render_scene,            # used inside child processes
@@ -67,7 +67,7 @@ try:
     )
     BACKEND_AVAILABLE = True
 except Exception as e:
-    print("⚠️ Could not import final_solution backend:", e)
+    print("⚠️ Could not import final_solution_ver2 backend:", e)
     BACKEND_AVAILABLE = False
 
 # Global queues for logs and UI events

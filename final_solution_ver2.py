@@ -382,14 +382,33 @@ def apply_filter_to_clip(clip, filter_obj: Filter):
         return clip.with_effects([BlackAndWhite()])
     elif filter_type == "blink":
         params = {k: v for k, v in {
-            "on_duration": filter_obj.on_duration,
-            "off_duration": filter_obj.off_duration
+            "duration_on": filter_obj.on_duration,
+            "duration_off": filter_obj.off_duration
         }.items() if v is not None}
         return clip.with_effects([Blink( **params)])
     elif filter_type == "multiplycolor":
+        # ENHANCED: Handles multiple color formats (hex, name, RGB array)
         if filter_obj.color:
-            return clip.with_effects([MultiplyColor(float(filter_obj.color))])
-            
+            color_val = filter_obj.color
+            final_color = color_val # Default to passing value as-is (for color names)
+            try:
+                if isinstance(color_val, str) and color_val.startswith('#'):
+                    # It's a hex string, convert to RGB tuple
+                    hex_color = color_val.lstrip("#")
+                    if len(hex_color) == 3: # Handle shorthand hex like #f80
+                        final_color = tuple(int(c * 2, 16) for c in hex_color)
+                    elif len(hex_color) == 6: # Handle #ff8800
+                        final_color = tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
+                    else:
+                        raise ValueError("Invalid hex color format")
+                elif isinstance(color_val, list):
+                    # It's an RGB/RGBA list from JSON, convert to tuple
+                    final_color = tuple(color_val)
+                
+                return clip.with_effects([MultiplyColor(final_color)])
+
+            except Exception as e:
+                print(f"[Warning] Could not apply multiplyColor filter with color '{color_val}': {e}")
     return clip
 
 # ===============================

@@ -225,6 +225,7 @@ Filters are applied to individual layers to change their visual appearance. They
 *   `type`: `"blink"`
 *   `on_duration`: (float, optional) Duration in seconds the layer is visible.
 *   `off_duration`: (float, optional) Duration in seconds the layer is hidden.
+* # The parameter in the MoviePy library asks for duration_on & duration_off. The purpose of flipping the parameter is to easier indentify if the error come from the JSON file or from the MoviePy library.
 
 **Example:**
 ```json
@@ -240,6 +241,7 @@ Filters are applied to individual layers to change their visual appearance. They
 **JSON Parameters:**
 *   `type`: `"multiplyColor"`
 *   `color`: (string) The color to multiply with (e.g., `"#FF0000"` for red, or `"blue"`).
+* # this will be convert to a float value in the code.
 
 **Example:**
 ```json

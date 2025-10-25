@@ -20,7 +20,7 @@
         {
           "layer_id": "title_1",
           "type": "text",
-          "content": "Animation: slideIn",
+          "content": "Animation: slideIn and fadeIn",
           "font": "Merriweather", "size": 72, "color": "#FFFFFF",
           "position": { "x": 960, "y": 200, "anchor": "center" },
           "animation": { "type": "fadeIn", "startTime_sec": 0.5, "duration_sec": 1 }
@@ -55,10 +55,10 @@
         {
           "layer_id": "title_2",
           "type": "text",
-          "content": "Animation: slideOut",
+          "content": "Animation: slideOut and fadeOut",
           "font": "Merriweather", "size": 72, "color": "#FFFFFF",
           "position": { "x": 960, "y": 200, "anchor": "center" },
-          "animation": { "type": "fadeIn", "startTime_sec": 0.5, "duration_sec": 1 }
+          "animation": { "type": "fadeOut", "startTime_sec": 0.5, "duration_sec": 1 }
         },
         {
           "layer_id": "text_2",
@@ -70,7 +70,7 @@
             "type": "slideOut",
             "startTime_sec": 4,
             "duration_sec": 2,
-            "direction": "bottom"
+            "direction": "left"
           }
         }
       ]
