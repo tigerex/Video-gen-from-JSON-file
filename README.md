@@ -108,7 +108,9 @@ python final_solution_ver.py path/to/project.json
 │   ├─ audio/
 │   ├─ images/
 │   └─ fonts/
-├─ /results/                    # rendered final videos and logs
+├─ /Documents/                  # include all the documents
+├─ /Input/                      # all JSON file should be in here
+├─ /Output/                     # rendered final videos and logs (only logs for now)
 ├─ /temp/                       # temporary scene outputs (auto-clean recommended)
 ├─ UI_moviePy.py                # Tkinter-based UI (main entrypoint for now)
 ├─ final_solution_ver2.py            # Core rendering backend used by UI and CLI
