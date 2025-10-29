@@ -405,7 +405,7 @@ def apply_filter_to_clip(clip, filter_obj: Filter):
                     # It's an RGB/RGBA list from JSON, convert to tuple
                     final_color = tuple(color_val)
                 
-                return clip.with_effects([MultiplyColor(final_color)])
+                return clip.with_effects([MultiplyColor(final_color)]) # Ignore error message from Pylance if there is one!!!
 
             except Exception as e:
                 print(f"[Warning] Could not apply multiplyColor filter with color '{color_val}': {e}")
@@ -516,8 +516,13 @@ def render_scene(scene: Scene, width: int, height: int, api_key: str, temp_dir: 
                     stroke_width = 2 # You can adjust the thickness of the stroke here
                     
                     temp_clip = TextClip(
-                        text=layer.content, font=font_path, font_size=layer.size or 40,
-                        color=text_color, stroke_color='black', stroke_width=stroke_width, method="label"
+                        text=layer.content, 
+                        font=font_path, 
+                        font_size=layer.size or 40,
+                        color=text_color, 
+                        stroke_color='black', 
+                        stroke_width=stroke_width, 
+                        method="label"
                     )
                     text_w, text_h = temp_clip.size
                     temp_clip.close()
@@ -526,9 +531,14 @@ def render_scene(scene: Scene, width: int, height: int, api_key: str, temp_dir: 
                     padded_canvas_size = (text_w, text_h + vertical_padding)
 
                     txt_clip = TextClip(
-                        text=layer.content, font=font_path, font_size=layer.size or 40,
-                        color=text_color, stroke_color='black', stroke_width=stroke_width,
-                        size=padded_canvas_size, method="label"
+                        text=layer.content, 
+                        font=font_path, 
+                        font_size=layer.size or 40,
+                        color=text_color, 
+                        stroke_color='black', 
+                        stroke_width=stroke_width,
+                        size=padded_canvas_size, 
+                        method="label"
                     )
                     
                     if layer.position:
@@ -549,7 +559,7 @@ def render_scene(scene: Scene, width: int, height: int, api_key: str, temp_dir: 
                     clip_to_add = txt_clip
 
                 except Exception as e:
-                    print(f"[Warning] TextClip creation failed for '{layer.content[:30]}': {e}")
+                    print(f"[Warning] TextClip creation failed for '{layer.content[:30]}': {e}") # Ignore error message from Pylance if there is one!!!
                     continue
 
             if clip_to_add:
@@ -596,7 +606,7 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
 
     # Workspace folders
     temp_dir = os.path.join(os.getcwd(), "temp")
-    result_dir = os.path.join(os.getcwd(), "results")
+    result_dir = os.path.join(os.getcwd(), "Output")
     os.makedirs(temp_dir, exist_ok=True)
     os.makedirs(result_dir, exist_ok=True)
 
@@ -759,7 +769,7 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
 # ===============================
 def main():
     parser = argparse.ArgumentParser(description="Render video from JSON (parallel by default).")
-    parser.add_argument("json_path", nargs="?", default="sorten_to_test_output10.json")
+    parser.add_argument("json_path", nargs="?", default="Input/sorten_to_test_output10.json")
     parser.add_argument("--no-parallel", action="store_true", help="Disable parallel mode.")
 
     args = parser.parse_args()
