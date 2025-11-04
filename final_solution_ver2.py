@@ -1,5 +1,6 @@
 # Parallel MoviePy renderer with local asset caching and cleanup.
 import os
+os.environ["IMAGEIO_FFMPEG_EXE"] = "/usr/bin/ffmpeg" 
 import sys
 import json
 import re
@@ -118,6 +119,34 @@ ASSET_DIRS = {
 }
 DOWNLOAD_INDEX_PATH = os.path.join(ASSET_ROOT, "download_index.json")
 _INDEX_LOCK = threading.Lock()  # used only in the main process / threads
+
+# Choosing the best encoder based on available hardware
+def choose_best_encoder():
+    """Auto-detect the best available video encoder."""
+    try:
+        gpu_output = subprocess.check_output(
+            ["nvidia-smi", "--query-gpu=name,driver_version", "--format=csv,noheader"],
+            stderr=subprocess.DEVNULL,
+            text=True
+        ).strip()
+        if "NVIDIA" in gpu_output:
+            # Prefer AV1 if supported by modern GPUs
+            ffmpeg_encoders = subprocess.check_output(
+                ["ffmpeg", "-hide_banner", "-encoders"],
+                stderr=subprocess.DEVNULL,
+                text=True
+            )
+            if "av1_nvenc" in ffmpeg_encoders:
+                print("🎥 Using AV1 NVENC encoder (GPU)")
+                return "av1_nvenc"
+            elif "h264_nvenc" in ffmpeg_encoders:
+                print("🎥 Using H.264 NVENC encoder (GPU)")
+                return "h264_nvenc"
+        print("⚙️ No NVIDIA GPU detected or NVENC unavailable, using CPU libx264.")
+    except Exception:
+        print("⚙️ No NVIDIA GPU or nvidia-smi not available, defaulting to CPU.")
+    return "libx264"
+
 
 def ensure_asset_dirs():
     for p in ASSET_DIRS.values():
@@ -587,7 +616,15 @@ def render_scene(scene: Scene, width: int, height: int, api_key: str, temp_dir: 
 
     scene_out = os.path.join(temp_dir, f"scene_{scene.scene_id}.mp4")
     try:
-        scene_clip.write_videofile(scene_out, fps=30, codec="libx264", audio_codec="aac")
+        encoder = choose_best_encoder()
+        scene_clip.write_videofile(
+            scene_out,
+            fps=60,
+            codec=encoder,
+            audio_codec="aac",
+            ffmpeg_params=["-pix_fmt", "yuv420p"]
+        )
+
     except Exception as e:
         print(f"[Error] Failed to render scene {scene.scene_id}: {e}")
         raise
@@ -680,11 +717,13 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
         final = concatenate_videoclips(final_clips, method="compose")
 
         temp_final_path = os.path.join(temp_dir, "final_temp.mp4")
+        encoder = choose_best_encoder()
         final.write_videofile(
             temp_final_path,
-            codec="libx264",
+            codec=encoder,
             fps=project.metadata.fps,
-            audio_codec="aac"
+            audio_codec="aac",
+            ffmpeg_params=["-pix_fmt", "yuv420p"]
         )
         final.close() # Close the concatenated clip
     finally:
