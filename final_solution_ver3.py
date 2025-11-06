@@ -1,6 +1,6 @@
 # Parallel MoviePy renderer with local asset caching and cleanup.
 import os
-# os.environ["IMAGEIO_FFMPEG_EXE"] = "/usr/bin/ffmpeg"  only neeeded if ffmpeg is in a non-standard location
+os.environ["IMAGEIO_FFMPEG_EXE"] = "/usr/local/bin/ffmpeg" 
 import sys
 import json
 import re
@@ -132,7 +132,7 @@ def choose_best_encoder():
         if "NVIDIA" in gpu_output:
             # Prefer AV1 if supported by modern GPUs
             ffmpeg_encoders = subprocess.check_output(
-                ["ffmpeg", "-hide_banner", "-encoders"],
+                ["ffmpeg", "-hide_banner", "-encoders", "-loglevel", "verbose"],
                 stderr=subprocess.DEVNULL,
                 text=True
             )
@@ -703,34 +703,79 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
                 print(f"⚠️ Scene {scene_id} failed: {e}")
 
     # In build_video_from_project_parallel function
-    print("🎞️ Concatenating scenes...")
-    final_clips = [] # Initialize empty list
+    # print("🎞️ Concatenating scenes...")
+    # final_clips = [] # Initialize empty list
+    # try:
+    #     # Define a key to extract the number from the filename for proper sorting
+    #     def sort_key(filepath):
+    #         match = re.search(r'scene_(\d+)\.mp4', os.path.basename(filepath))
+    #         return int(match.group(1)) if match else 0
+        
+    #     sorted_outputs = sorted(scene_outputs, key=sort_key)
+    #     final_clips = [VideoFileClip(p) for p in sorted_outputs]
+        
+    #     final = concatenate_videoclips(final_clips, method="compose")
+
+    #     temp_final_path = os.path.join(temp_dir, "final_temp.mp4")
+    #     encoder = choose_best_encoder()
+    #     final.write_videofile(
+    #         temp_final_path,
+    #         codec=encoder,
+    #         fps=project.metadata.fps,
+    #         audio_codec="aac",
+    #         ffmpeg_params=["-pix_fmt", "yuv420p"]
+    #     )
+    #     final.close() # Close the concatenated clip
+    # finally:
+    #     # Ensure all intermediate clips are closed
+    #     for clip in final_clips:
+    #         clip.close()
+    
+    print("🎞️ Concatenating scenes (fast mode)...")
+    
+    # Sort scene outputs numerically by scene number
+    def sort_key(filepath):
+        match = re.search(r'scene_(\d+)\.mp4', os.path.basename(filepath))
+        return int(match.group(1)) if match else 0
+    
+    sorted_outputs = sorted(scene_outputs, key=sort_key)
+    
+    # Write FFmpeg concat list
+    concat_list_path = os.path.join(temp_dir, "concat_list.txt")
+    with open(concat_list_path, "w") as f:
+        for clip_path in sorted_outputs:
+            f.write(f"file '{clip_path}'\n")
+    
+    # Define output path
+    temp_final_path = os.path.join(temp_dir, "final_temp.mp4")
+    
+    # Use ffmpeg directly with -c copy (no re-encode) and verbose logging
+    concat_cmd = [
+        os.environ.get("IMAGEIO_FFMPEG_EXE", "ffmpeg"),
+        "-hide_banner",
+        "-loglevel", "verbose",  # 👈 adds detailed FFmpeg logs
+        "-y",                    # auto-overwrite
+        "-f", "concat",
+        "-safe", "0",
+        "-i", concat_list_path,
+        "-c", "copy",            # direct stream copy
+        temp_final_path
+    ]
+    
+    print("🧠 Running:", " ".join(concat_cmd))
     try:
-        # Define a key to extract the number from the filename for proper sorting
-        def sort_key(filepath):
-            match = re.search(r'scene_(\d+)\.mp4', os.path.basename(filepath))
-            return int(match.group(1)) if match else 0
-        
-        sorted_outputs = sorted(scene_outputs, key=sort_key)
-        final_clips = [VideoFileClip(p) for p in sorted_outputs]
-        
-        final = concatenate_videoclips(final_clips, method="compose")
-
-        temp_final_path = os.path.join(temp_dir, "final_temp.mp4")
+        subprocess.run(concat_cmd, check=True)
+    except subprocess.CalledProcessError:
+        print("⚠️ Direct concat failed, re-encoding with GPU...")
         encoder = choose_best_encoder()
-        final.write_videofile(
-            temp_final_path,
-            codec=encoder,
-            fps=project.metadata.fps,
-            audio_codec="aac",
-            ffmpeg_params=["-pix_fmt", "yuv420p"]
-        )
-        final.close() # Close the concatenated clip
-    finally:
-        # Ensure all intermediate clips are closed
-        for clip in final_clips:
-            clip.close()
-
+        subprocess.run([
+            os.environ.get("IMAGEIO_FFMPEG_EXE", "ffmpeg"),
+            "-hide_banner", "-loglevel", "verbose", "-y",
+            "-f", "concat", "-safe", "0", "-i", concat_list_path,
+            "-c:v", encoder, "-pix_fmt", "yuv420p", "-c:a", "aac",
+            temp_final_path
+        ], check=True)
+    
     # Move final output into results/
     output_path = os.path.join(result_dir, f"final_output_{timestamp_str}.mp4")
     shutil.move(temp_final_path, output_path)
