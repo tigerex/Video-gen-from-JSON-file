@@ -1,7 +1,7 @@
 {
-    "start_time": "2025-10-21T20:30:55.191800",
-    "system": "Windows-10-10.0.26100-SP0",
-    "cpu_count": 16,
+    "start_time": "2025-11-28T17:16:54.978073",
+    "system": "Linux-6.12.57+deb13-cloud-amd64-x86_64-with-glibc2.41",
+    "cpu_count": 32,
     "status": "completed",
     "errors": [],
     "warnings": [],
@@ -26,20 +26,20 @@
         }
     },
     "asset_count": 8,
-    "end_time": "2025-10-21T20:47:24.226209",
-    "elapsed_seconds": 983.51,
+    "end_time": "2025-11-28T17:27:17.856779",
+    "elapsed_seconds": 619.41,
     "avg_scene_seconds": 0.0,
     "video_metadata": {
-        "title": "Your Content Workflow is Broken: Ditch the Scattered Docs for a Smart Editorial Calendar in Google Sheets",
+        "title": "This is a sorten version to test the video rendering system",
         "resolution": "1920x1080",
         "fps": 30,
         "scene_count": 3
     },
     "hardware": {
-        "cpu_percent": 2.6,
-        "memory_used_mb": 8878.85,
-        "memory_total_mb": 16008.93,
+        "cpu_percent": 0.9,
+        "memory_used_mb": 3284.54,
+        "memory_total_mb": 128907.98,
         "gpu_info": "No GPU info (nvidia-smi not found)"
     },
-    "final_video_path": "C:\\Minh\\workplace\\Internship\\results\\final_output_2025-10-21_20-30-55.mp4"
+    "final_video_path": "/home/admin/minhhu/Scripts/../Output/final_output_2025-11-28_17-16-54/final_output_2025-11-28_17-16-54.mp4"
 }

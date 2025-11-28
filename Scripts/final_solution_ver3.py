@@ -1,6 +1,12 @@
+#VERSION 3: add Server side support 
+#- will check for available hardware and automatically do logging
+#- optimized concatnating step
+#
+#- IN USE BY SERVER
+
 # Parallel MoviePy renderer with local asset caching and cleanup.
 import os
-os.environ["IMAGEIO_FFMPEG_EXE"] = "/usr/local/bin/ffmpeg" 
+# os.environ["IMAGEIO_FFMPEG_EXE"] = "/usr/local/bin/ffmpeg" 
 import sys
 import json
 import re
@@ -75,6 +81,8 @@ class Position:
     x: int
     y: int
     anchor: str
+    width: Optional[int] = None # ADDED to work with .json file ver15
+    height: Optional[int] = None # ADDED to work with .json file ver15
 
 @dataclass
 class Layer:
@@ -111,7 +119,7 @@ class VideoProject:
 # ===============================
 # Asset handling & index
 # ===============================
-ASSET_ROOT = os.path.join(os.getcwd(), "assets")
+ASSET_ROOT = os.path.join(os.getcwd(), "../assets")
 ASSET_DIRS = {
     "audio": os.path.join(ASSET_ROOT, "audio"),
     "images": os.path.join(ASSET_ROOT, "images"),
@@ -276,12 +284,6 @@ def get_local_asset_path(url: str, kind: str) -> Optional[str]:
 def fetch_fallback_font(api_key: str) -> str:
     ensure_asset_dirs()
     fallback_path = os.path.join(ASSET_DIRS["fonts"], "Open_Sans.ttf")
-    # if not os.path.exists(fallback_path):
-    #     print("Downloading fallback font Open_Sans...")
-    #     r = requests.get(url)
-    #     if r.status_code == 200:
-    #         with open(fallback_path, "wb") as f:
-    #             f.write(r.content)
     return fallback_path
 
 def fetch_google_font_via_api(font_name: str, api_key: str) -> str:
@@ -496,7 +498,6 @@ def parallel_download_assets(project: VideoProject, api_key: str):
 # ===============================
 # Scene rendering (worker processes)
 # ===============================
-# MODIFIED: Added filter application step
 def render_scene(scene: Scene, width: int, height: int, api_key: str, temp_dir: str):
     import os
     from moviepy import CompositeVideoClip, ImageClip, AudioFileClip, TextClip, ColorClip
@@ -642,8 +643,8 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
     width, height = map(int, project.metadata.resolution.split("x"))
 
     # Workspace folders
-    temp_dir = os.path.join(os.getcwd(), "temp")
-    result_dir = os.path.join(os.getcwd(), "Output")
+    temp_dir = os.path.join(os.getcwd(), "../temp")
+    result_dir = os.path.join(os.getcwd(), "../Output")
     os.makedirs(temp_dir, exist_ok=True)
     os.makedirs(result_dir, exist_ok=True)
 
@@ -701,35 +702,6 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
                 }
                 log_data["errors"].append(f"Scene {scene_id}: {e}")
                 print(f"⚠️ Scene {scene_id} failed: {e}")
-
-    # In build_video_from_project_parallel function
-    # print("🎞️ Concatenating scenes...")
-    # final_clips = [] # Initialize empty list
-    # try:
-    #     # Define a key to extract the number from the filename for proper sorting
-    #     def sort_key(filepath):
-    #         match = re.search(r'scene_(\d+)\.mp4', os.path.basename(filepath))
-    #         return int(match.group(1)) if match else 0
-        
-    #     sorted_outputs = sorted(scene_outputs, key=sort_key)
-    #     final_clips = [VideoFileClip(p) for p in sorted_outputs]
-        
-    #     final = concatenate_videoclips(final_clips, method="compose")
-
-    #     temp_final_path = os.path.join(temp_dir, "final_temp.mp4")
-    #     encoder = choose_best_encoder()
-    #     final.write_videofile(
-    #         temp_final_path,
-    #         codec=encoder,
-    #         fps=project.metadata.fps,
-    #         audio_codec="aac",
-    #         ffmpeg_params=["-pix_fmt", "yuv420p"]
-    #     )
-    #     final.close() # Close the concatenated clip
-    # finally:
-    #     # Ensure all intermediate clips are closed
-    #     for clip in final_clips:
-    #         clip.close()
     
     print("🎞️ Concatenating scenes (fast mode)...")
     
@@ -753,7 +725,7 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
     concat_cmd = [
         os.environ.get("IMAGEIO_FFMPEG_EXE", "ffmpeg"),
         "-hide_banner",
-        "-loglevel", "verbose",  # 👈 adds detailed FFmpeg logs
+        "-loglevel", "verbose",  # detailed FFmpeg logs
         "-y",                    # auto-overwrite
         "-f", "concat",
         "-safe", "0",
@@ -776,8 +748,13 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
             temp_final_path
         ], check=True)
     
-    # Move final output into results/
-    output_path = os.path.join(result_dir, f"final_output_{timestamp_str}.mp4")
+    # Folder name based on output
+    output_folder = os.path.join(result_dir, f"final_output_{timestamp_str}")
+    os.makedirs(output_folder, exist_ok=True)
+
+
+    # Move final output into results/Folder/
+    output_path = os.path.join(output_folder, f"final_output_{timestamp_str}.mp4")
     shutil.move(temp_final_path, output_path)
 
     # Cleanup temp + partial asset folders
@@ -839,7 +816,7 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
     })
 
     # Save log file with timestamp
-    log_path = os.path.join(result_dir, f"render_log_{timestamp_str}.json")
+    log_path = os.path.join(output_folder, f"render_log_{timestamp_str}.json")
     with open(log_path, "w") as f:
         json.dump(log_data, f, indent=4)
 
@@ -853,7 +830,7 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
 # ===============================
 def main():
     parser = argparse.ArgumentParser(description="Render video from JSON (parallel by default).")
-    parser.add_argument("json_path", nargs="?", default="Input/sorten_to_test_output10.json")
+    parser.add_argument("json_path", nargs="?", default="../Input/sorten_to_test_output10.json")
     parser.add_argument("--no-parallel", action="store_true", help="Disable parallel mode.")
 
     args = parser.parse_args()

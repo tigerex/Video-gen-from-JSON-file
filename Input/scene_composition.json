@@ -1,0 +1,1634 @@
+{
+  "videoMetadata": {
+    "title": "Making Connections: A Practical Guide to Using Comparatives",
+    "resolution": "1920x1080",
+    "fps": 30
+  },
+  "scenes": [
+    {
+      "scene_id": 1,
+      "slide_id": 1,
+      "audioUrl": "https://drive.google.com/file/d/18ponxqLZ416Oyzr16NKOKcZa3ZzTW7cZ/view?usp=drivesdk",
+      "audioDuration_sec": 77.2,
+      "layers": [
+        {
+          "layer_id": "image_bg_1",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1so-VeDsjb3xOe0W_fVt_vbLAeFYlAsM5/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "topLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_1",
+          "type": "text",
+          "content": "Let's Compare! Spot the Differences!",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 480,
+            "y": 200,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_1",
+          "type": "text",
+          "content": "Get ready to open your eyes and find the unique details!",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#DDDDDD",
+          "position": {
+            "x": 480,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "main_image_1",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1so-VeDsjb3xOe0W_fVt_vbLAeFYlAsM5/view?usp=drivesdk",
+          "position": {
+            "x": 1300,
+            "y": 540,
+            "width": 800,
+            "height": 600,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "slideInRight",
+            "startTime_sec": 1.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_1",
+          "type": "text",
+          "content": "Look at the two pictures carefully.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 450,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 2,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_1",
+          "type": "text",
+          "content": "Can you find 5 differences between them?",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 510,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 3.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_1",
+          "type": "text",
+          "content": "Share what you see with a partner or the class! (e.g., \"The cat in picture A is bigger than the cat in picture B.\")",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 570,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_1",
+          "type": "text",
+          "content": "Today, we'll learn how to talk about these differences using 'comparatives'!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 630,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 6.5,
+            "duration_sec": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 2,
+      "slide_id": 2,
+      "audioUrl": "https://drive.google.com/file/d/1nRcs7UHYnkHP1DMZLsGOwpihFxpomGMh/view?usp=drivesdk",
+      "audioDuration_sec": 92.65,
+      "layers": [
+        {
+          "layer_id": "image_bg_2",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1F_CXcTiANcPOLKXApVcK-EQbk2gYdtff/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "topRight"
+          }
+        },
+        {
+          "layer_id": "title_text_2",
+          "type": "text",
+          "content": "How to Compare: Short Words (1 Syllable)",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 200,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_2",
+          "type": "text",
+          "content": "Adding '-er' makes things *more*!",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#DDDDDD",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_2",
+          "type": "text",
+          "content": "For most short adjectives (one syllable), we add -er to the end.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 450,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 2,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_2",
+          "type": "text",
+          "content": "Example: tall -> taller, fast -> faster, old -> older",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 510,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 3.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_2",
+          "type": "text",
+          "content": "Spelling Rules to Remember:",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 570,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_2",
+          "type": "text",
+          "content": "If the adjective ends in -e, just add -r. (Example: large -> larger, nice -> nicer)",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 630,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 6.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_5_2",
+          "type": "text",
+          "content": "If the adjective ends in consonant + vowel + consonant, double the last consonant and add -er. (Example: big -> bigger, hot -> hotter, thin -> thinner)",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 690,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 8,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_6_2",
+          "type": "text",
+          "content": "Let's try a few together!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 750,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 9.5,
+            "duration_sec": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 3,
+      "slide_id": 3,
+      "audioUrl": "https://drive.google.com/file/d/1FNY6vD_mf99eDX9Oz-AvCD6iz0f_pOEp/view?usp=drivesdk",
+      "audioDuration_sec": 93.6,
+      "layers": [
+        {
+          "layer_id": "image_bg_3",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1-cRsT1fJXSw8B5-85rrfuTi7_Jy80S6-/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "bottomLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_3",
+          "type": "text",
+          "content": "How to Compare: Long Words (2+ Syllables)",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 200,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_3",
+          "type": "text",
+          "content": "When words are longer, we use 'more'!",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#DDDDDD",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_3",
+          "type": "text",
+          "content": "For adjectives with two or more syllables, we use more before the adjective.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 450,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 2,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_3",
+          "type": "text",
+          "content": "Example: beautiful -> more beautiful, expensive -> more expensive, interesting -> more interesting",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 510,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 3.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_3",
+          "type": "text",
+          "content": "Important Note: We don't add '-er' to these longer words! (e.g., *not* \"beautifuller\")",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 570,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_3",
+          "type": "text",
+          "content": "Common 2-syllable exceptions ending in -y: Some 2-syllable adjectives ending in '-y' change 'y' to 'i' and add '-er'.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 630,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 6.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_5_3",
+          "type": "text",
+          "content": "Example: happy -> happier, easy -> easier, noisy -> noisier",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 690,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 8,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_6_3",
+          "type": "text",
+          "content": "Practice time! What about \"comfortable\"?",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 750,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 9.5,
+            "duration_sec": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 4,
+      "slide_id": 4,
+      "audioUrl": "https://drive.google.com/file/d/1b9TpafRBWBjL6EY0_icndgsPrvva3wiv/view?usp=drivesdk",
+      "audioDuration_sec": 91.35,
+      "layers": [
+        {
+          "layer_id": "image_bg_4",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1b9TpafRBWBjL6EY0_icndgsPrvva3wiv/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "bottomRight"
+          }
+        },
+        {
+          "layer_id": "title_text_4",
+          "type": "text",
+          "content": "The Special Cases: Irregular Comparatives",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 200,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_4",
+          "type": "text",
+          "content": "Some words have their own unique comparative forms!",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#DDDDDD",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_4",
+          "type": "text",
+          "content": "English has a few \"rebel\" adjectives that don't follow the rules. You just need to remember them!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 450,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 2,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_4",
+          "type": "text",
+          "content": "Good becomes better",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 510,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 3.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_4",
+          "type": "text",
+          "content": "Example: \"This movie is good, but that one is better.\"",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 570,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_4",
+          "type": "text",
+          "content": "Bad becomes worse",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 630,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 6.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_5_4",
+          "type": "text",
+          "content": "Example: \"The weather today is bad, but yesterday it was worse.\"",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 690,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 8,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_6_4",
+          "type": "text",
+          "content": "Far becomes farther (for physical distance) or further (for abstract distance/additional)",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 750,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 9.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_7_4",
+          "type": "text",
+          "content": "Example: \"My house is farther than yours.\" / \"Do you have any further questions?\"",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 810,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 11,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_8_4",
+          "type": "text",
+          "content": "Let's try making sentences with these!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 870,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 12.5,
+            "duration_sec": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 5,
+      "slide_id": 5,
+      "audioUrl": "https://drive.google.com/file/d/1EjxyEjnDHtGJfM9wxtBW30w9JAyUl3jY/view?usp=drivesdk",
+      "audioDuration_sec": 74.3,
+      "layers": [
+        {
+          "layer_id": "image_bg_5",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/176Hauh8xzqWa5I5m3H3NA86Rjx3b8liY/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "topLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_5",
+          "type": "text",
+          "content": "Your Turn! Form the Comparatives!",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 200,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_5",
+          "type": "text",
+          "content": "Let's see how well you remember the rules!",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#DDDDDD",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "main_image_5",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/176Hauh8xzqWa5I5m3H3NA86Rjx3b8liY/view?usp=drivesdk",
+          "position": {
+            "x": 960,
+            "y": 650,
+            "width": 1000,
+            "height": 700,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "zoomIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_5",
+          "type": "text",
+          "content": "Look at the adjective on the screen.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 450,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 2,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_5",
+          "type": "text",
+          "content": "Quickly say or write its comparative form.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 510,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 3.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_5",
+          "type": "text",
+          "content": "Ready? Go!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 570,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_5",
+          "type": "text",
+          "content": "Examples: small -> ?, difficult -> ?, hot -> ?, friendly -> ?, exciting -> ?, good -> ?",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 630,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 6.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_5_5",
+          "type": "text",
+          "content": "Great job everyone! You're doing fantastic!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 690,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 8,
+            "duration_sec": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 6,
+      "slide_id": 6,
+      "audioUrl": "https://drive.google.com/file/d/1ElEc6tBtB_FDDEyz_1-gXtjRL6EI1fJ3/view?usp=drivesdk",
+      "audioDuration_sec": 82.15,
+      "layers": [
+        {
+          "layer_id": "image_bg_6",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1Ugh5onneQ4MZuL6gJ1SPVBBeHg9ii0Vj/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "topRight"
+          }
+        },
+        {
+          "layer_id": "title_text_6",
+          "type": "text",
+          "content": "Putting It All Together: Making Full Sentences",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 200,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_6",
+          "type": "text",
+          "content": "How to compare two things using 'than'!",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#DDDDDD",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_6",
+          "type": "text",
+          "content": "To compare two nouns (people, places, or things), we use this structure:",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 450,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 2,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_6",
+          "type": "text",
+          "content": "Noun 1 + verb + comparative adjective + than + Noun 2.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 510,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 3.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_6",
+          "type": "text",
+          "content": "Example 1: \"My car is faster than your car.\"",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 570,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_6",
+          "type": "text",
+          "content": "Example 2: \"Learning English is more interesting than learning math (for me!).\"",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 630,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 6.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_5_6",
+          "type": "text",
+          "content": "Example 3: \"Today's weather is better than yesterday's.\"",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 690,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 8,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_6_6",
+          "type": "text",
+          "content": "Let's try making some sentences about things in this room!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 750,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 9.5,
+            "duration_sec": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 7,
+      "slide_id": 7,
+      "audioUrl": "https://drive.google.com/file/d/1CjUYwWRdOIe3aC-MfYnCl6sszbsaRp6w/view?usp=drivesdk",
+      "audioDuration_sec": 81.2,
+      "layers": [
+        {
+          "layer_id": "image_bg_7",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1JL3VnSgnPKI0c97Ti0Yu89-_mVxAZMT8/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "bottomLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_7",
+          "type": "text",
+          "content": "Let's Talk! Which Do You Prefer?",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 200,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_7",
+          "type": "text",
+          "content": "Work with a partner and use comparatives to explain your choices!",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#DDDDDD",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "main_image_7",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1JL3VnSgnPKI0c97Ti0Yu89-_mVxAZMT8/view?usp=drivesdk",
+          "position": {
+            "x": 960,
+            "y": 650,
+            "width": 1200,
+            "height": 700,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "slideInUp",
+            "startTime_sec": 1.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_7",
+          "type": "text",
+          "content": "In pairs, discuss the following questions.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 450,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 2,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_7",
+          "type": "text",
+          "content": "\"Which is better, coffee or tea?\" (e.g., \"Coffee is stronger than tea, so I prefer it.\")",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 510,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 3.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_7",
+          "type": "text",
+          "content": "\"Is living in the city more exciting than living in the countryside?\"",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 570,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_7",
+          "type": "text",
+          "content": "\"Are books more interesting than movies?\"",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 630,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 6.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_5_7",
+          "type": "text",
+          "content": "\"Which is healthier, fruit or chocolate?\"",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 690,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 8,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_6_7",
+          "type": "text",
+          "content": "Remember to use your comparative adjectives and \"than\"!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 750,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 9.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_7_7",
+          "type": "text",
+          "content": "Be ready to share your answers with the class!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 810,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 11,
+            "duration_sec": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 8,
+      "slide_id": 8,
+      "audioUrl": "https://drive.google.com/file/d/1mSrvgyCEFliWoX4EywNjJDVkKg5j1D-E/view?usp=drivesdk",
+      "audioDuration_sec": 110.35,
+      "layers": [
+        {
+          "layer_id": "image_bg_8",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1uIky_fMI2KGFXGEPgzV60Tat1CmPUKO4/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "bottomRight"
+          }
+        },
+        {
+          "layer_id": "title_text_8",
+          "type": "text",
+          "content": "Real-World Comparisons: Role-Play!",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 200,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_8",
+          "type": "text",
+          "content": "Imagine you are shopping or planning a trip – use comparatives to decide!",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#DDDDDD",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "main_image_8",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1uIky_fMI2KGFXGEPgzV60Tat1CmPUKO4/view?usp=drivesdk",
+          "position": {
+            "x": 960,
+            "y": 650,
+            "width": 1200,
+            "height": 700,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "slideInUp",
+            "startTime_sec": 1.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_8",
+          "type": "text",
+          "content": "Scenario 1: Shopping for a new phone.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 450,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 2,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_8",
+          "type": "text",
+          "content": "Work in pairs. One person is the customer, the other is the salesperson.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 510,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 3.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_8",
+          "type": "text",
+          "content": "Discuss two different phones. Use comparatives to talk about price, size, camera quality, battery life, etc.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 570,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_8",
+          "type": "text",
+          "content": "Example: \"This phone is cheaper than that one, but its camera is worse.\"",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 630,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 6.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_5_8",
+          "type": "text",
+          "content": "Scenario 2: Planning a vacation.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 690,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 8,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_6_8",
+          "type": "text",
+          "content": "Discuss two potential destinations.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 750,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 9.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_7_8",
+          "type": "text",
+          "content": "Compare the weather, cost, activities, food, and how crowded they might be.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 810,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 11,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_8_8",
+          "type": "text",
+          "content": "Example: \"Paris is more romantic than London, but London is easier to get to.\"",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 870,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 12.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_9_8",
+          "type": "text",
+          "content": "Have fun and be creative!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 930,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 14,
+            "duration_sec": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 9,
+      "slide_id": 9,
+      "audioUrl": "https://drive.google.com/file/d/1Agy0UuL7Mcg4cDFltqq0skjgmUJx5Zl8/view?usp=drivesdk",
+      "audioDuration_sec": 113.45,
+      "layers": [
+        {
+          "layer_id": "image_bg_9",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1Agy0UuL7Mcg4cDFltqq0skjgmUJx5Zl8/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.1,
+            "direction": "topLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_9",
+          "type": "text",
+          "content": "Great Job! Let's Review Our Journey!",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 200,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_9",
+          "type": "text",
+          "content": "A quick recap of what we learned today about comparisons!",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#DDDDDD",
+          "position": {
+            "x": 960,
+            "y": 300,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_point_1_9",
+          "type": "text",
+          "content": "How do we form comparatives?",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 450,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 2,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_2_9",
+          "type": "text",
+          "content": "Short adjectives (1 syllable): Add -er (e.g., small -> smaller)",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 510,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 3.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_3_9",
+          "type": "text",
+          "content": "Long adjectives (2+ syllables): Use more + adjective (e.g., beautiful -> more beautiful)",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 570,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_4_9",
+          "type": "text",
+          "content": "Irregular adjectives: Remember the special ones! (e.g., good -> better, bad -> worse)",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 630,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 6.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_5_9",
+          "type": "text",
+          "content": "How do we use them in sentences?",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 690,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 8,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_6_9",
+          "type": "text",
+          "content": "Noun 1 + verb + comparative adjective + than + Noun 2.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 750,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 9.5,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_7_9",
+          "type": "text",
+          "content": "Quick Check: What's one new thing you learned or one comparative you'll use today?",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 810,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 11,
+            "duration_sec": 0.5
+          }
+        },
+        {
+          "layer_id": "bullet_point_8_9",
+          "type": "text",
+          "content": "You are now better at making comparisons! Keep practicing!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 100,
+            "y": 870,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "slideInLeft",
+            "startTime_sec": 12.5,
+            "duration_sec": 0.5
+          }
+        }
+      ]
+    }
+  ]
+}

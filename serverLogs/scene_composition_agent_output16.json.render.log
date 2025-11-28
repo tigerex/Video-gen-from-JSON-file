@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/admin/minhhu/final_solution_ver3.py", line 850, in <module>
+    main()
+    ~~~~^^
+  File "/home/admin/minhhu/final_solution_ver3.py", line 843, in main
+    project = load_project_from_json(args.json_path)
+  File "/home/admin/minhhu/final_solution_ver3.py", line 467, in load_project_from_json
+    layers.append(Layer(**layer_dict))
+                  ~~~~~^^^^^^^^^^^^^^
+TypeError: Layer.__init__() got an unexpected keyword argument 'style'. Did you mean 'type'?
