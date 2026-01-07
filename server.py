@@ -14,9 +14,9 @@ import upload_to_drive
 # ---------------------------
 # Directories
 # ---------------------------
-INPUT_DIR = "../Input"
-OUTPUT_DIR = "../utput"
-LOG_DIR = "../serverLogs"
+INPUT_DIR = "Input"
+OUTPUT_DIR = "Output"
+LOG_DIR = "serverLogs"
 RENDER_LOG = os.path.join(LOG_DIR, "renderHistory.log")
 
 # make sure folders existed

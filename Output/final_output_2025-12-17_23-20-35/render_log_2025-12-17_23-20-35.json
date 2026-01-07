@@ -1,0 +1,81 @@
+{
+    "start_time": "2025-12-17T23:20:35.363883",
+    "system": "Linux-6.12.57+deb13-cloud-amd64-x86_64-with-glibc2.41",
+    "cpu_count": 32,
+    "status": "completed",
+    "errors": [],
+    "warnings": [],
+    "scenes": {
+        "scene_4": {
+            "slide_id": 4,
+            "duration_sec": 73,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_9": {
+            "slide_id": 9,
+            "duration_sec": 73,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_5": {
+            "slide_id": 5,
+            "duration_sec": 53,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_7": {
+            "slide_id": 7,
+            "duration_sec": 57,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_6": {
+            "slide_id": 6,
+            "duration_sec": 61,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_1": {
+            "slide_id": 1,
+            "duration_sec": 69,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_3": {
+            "slide_id": 3,
+            "duration_sec": 81,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_2": {
+            "slide_id": 2,
+            "duration_sec": 81,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        },
+        "scene_8": {
+            "slide_id": 8,
+            "duration_sec": 89,
+            "elapsed_sec": 0.0,
+            "status": "completed"
+        }
+    },
+    "asset_count": 18,
+    "end_time": "2025-12-17T23:38:59.232953",
+    "elapsed_seconds": 1096.98,
+    "avg_scene_seconds": 0.0,
+    "video_metadata": {
+        "title": "Test test test test test",
+        "resolution": "1920x1080",
+        "fps": 30,
+        "scene_count": 9
+    },
+    "hardware": {
+        "cpu_percent": 7.3,
+        "memory_used_mb": 3508.39,
+        "memory_total_mb": 128907.97,
+        "gpu_info": "No GPU info (nvidia-smi not found)"
+    },
+    "final_video_path": "/home/admin/minhhu/Output/final_output_2025-12-17_23-20-35/final_output_2025-12-17_23-20-35.mp4"
+}

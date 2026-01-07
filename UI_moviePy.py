@@ -58,7 +58,7 @@ load_dotenv()
 
 # Try to import backend functions from final_solution_ver2.py
 try:
-    from final_solution_ver2 import (
+    from final_solution_ver3 import (
         load_project_from_json,
         parallel_download_assets,
         render_scene,            # used inside child processes

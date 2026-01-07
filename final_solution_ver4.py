@@ -1,8 +1,4 @@
-#VERSION 3: add Server side support 
-#- will check for available hardware and automatically do logging
-#- optimized concatnating step
-#
-#- IN USE BY SERVER
+#VERSION 4: CHANGE TO USE GOOGLE SERVICE ACCOUNT FOR DOWNLOADING INSTEAD OF GDOWN - UNDER_DEVELOPING
 
 # Parallel MoviePy renderer with local asset caching and cleanup.
 import os
@@ -43,8 +39,12 @@ from moviepy.video.fx import FadeIn, FadeOut, CrossFadeIn, CrossFadeOut, Scroll,
 from moviepy.video.fx import LumContrast, Painting, InvertColors, BlackAndWhite, Blink, MultiplyColor
 
 
-import gdown
 import requests
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
+from googleapiclient.http import MediaIoBaseDownload
+import io
+
 from dotenv import load_dotenv
 
 # ===============================
@@ -81,8 +81,6 @@ class Position:
     x: int
     y: int
     anchor: str
-    width: Optional[int] = None # ADDED to work with .json file ver15
-    height: Optional[int] = None # ADDED to work with .json file ver15
 
 @dataclass
 class Layer:
@@ -119,7 +117,7 @@ class VideoProject:
 # ===============================
 # Asset handling & index
 # ===============================
-ASSET_ROOT = os.path.join(os.getcwd(), "../assets")
+ASSET_ROOT = os.path.join(os.getcwd(), "assets")
 ASSET_DIRS = {
     "audio": os.path.join(ASSET_ROOT, "audio"),
     "images": os.path.join(ASSET_ROOT, "images"),
@@ -127,34 +125,6 @@ ASSET_DIRS = {
 }
 DOWNLOAD_INDEX_PATH = os.path.join(ASSET_ROOT, "download_index.json")
 _INDEX_LOCK = threading.Lock()  # used only in the main process / threads
-
-# Choosing the best encoder based on available hardware
-def choose_best_encoder():
-    """Auto-detect the best available video encoder."""
-    try:
-        gpu_output = subprocess.check_output(
-            ["nvidia-smi", "--query-gpu=name,driver_version", "--format=csv,noheader"],
-            stderr=subprocess.DEVNULL,
-            text=True
-        ).strip()
-        if "NVIDIA" in gpu_output:
-            # Prefer AV1 if supported by modern GPUs
-            ffmpeg_encoders = subprocess.check_output(
-                ["ffmpeg", "-hide_banner", "-encoders", "-loglevel", "verbose"],
-                stderr=subprocess.DEVNULL,
-                text=True
-            )
-            if "av1_nvenc" in ffmpeg_encoders:
-                print("🎥 Using AV1 NVENC encoder (GPU)")
-                return "av1_nvenc"
-            elif "h264_nvenc" in ffmpeg_encoders:
-                print("🎥 Using H.264 NVENC encoder (GPU)")
-                return "h264_nvenc"
-        print("⚙️ No NVIDIA GPU detected or NVENC unavailable, using CPU libx264.")
-    except Exception:
-        print("⚙️ No NVIDIA GPU or nvidia-smi not available, defaulting to CPU.")
-    return "libx264"
-
 
 def ensure_asset_dirs():
     for p in ASSET_DIRS.values():
@@ -190,70 +160,63 @@ def extract_file_id(drive_url: str) -> Optional[str]:
     match = re.search(r"/d/([a-zA-Z0-9_-]+)", drive_url)
     return match.group(1) if match else None
 
+# === Google Drive API Authenticated Download ===
+DRIVE_SCOPES = ["https://www.googleapis.com/auth/drive"]
+_DRIVE_SERVICE = None
+
+def get_drive_service():
+    global _DRIVE_SERVICE
+    if _DRIVE_SERVICE is None:
+        creds = service_account.Credentials.from_service_account_file(
+            "service_account.json", scopes=DRIVE_SCOPES
+        )
+        _DRIVE_SERVICE = build("drive", "v3", credentials=creds, cache_discovery=False)
+    return _DRIVE_SERVICE
+
 def download_asset(url: str, kind: str) -> Optional[str]:
-    """
-    Downloads a Google Drive asset letting gdown pick the filename/extension,
-    then moves it into ./assets/{kind}/ and records the mapping (file_id -> path).
-    Thread-safe for main-thread downloads (uses _INDEX_LOCK).
-    """
     ensure_asset_dirs()
     file_id = extract_file_id(url)
     if not file_id:
-        print(f"⚠️ download_asset: invalid drive url: {url}")
+        print(f"⚠️ Invalid Drive URL: {url}")
         return None
 
-    # quick check: index -> existing file
     with _INDEX_LOCK:
         idx = _load_download_index()
-        mapped = idx.get(file_id)
-        if mapped and os.path.exists(mapped):
-            return mapped
+        if file_id in idx and os.path.exists(idx[file_id]):
+            return idx[file_id]
 
-    # Let gdown decide filename by not passing an explicit output filename.
-    uc_url = f"https://drive.google.com/uc?export=download&id={file_id}"
+    service = get_drive_service()
     try:
-        downloaded_path = gdown.download(uc_url, output=None, quiet=False)
+        meta = service.files().get(fileId=file_id, fields="name").execute()
+        filename = meta["name"]
     except Exception as e:
-        print(f"⚠️ gdown failed for {url}: {e}")
-        downloaded_path = None
-
-    if not downloaded_path or not os.path.exists(downloaded_path):
-        print(f"⚠️ download_asset: gdown didn't return a valid file for {url}")
+        print(f"⚠️ metadata fetch failed {file_id}: {e}")
         return None
 
-    filename = os.path.basename(downloaded_path)
     dest_dir = ASSET_DIRS.get(kind, ASSET_ROOT)
+    os.makedirs(dest_dir, exist_ok=True)
     dest_path = os.path.join(dest_dir, filename)
-
-    # If dest exists, make a unique name (preserve extension)
     base, ext = os.path.splitext(filename)
     counter = 1
     while os.path.exists(dest_path):
-        dest_filename = f"{base}_{counter}{ext}"
-        dest_path = os.path.join(dest_dir, dest_filename)
+        dest_path = os.path.join(dest_dir, f"{base}_{counter}{ext}")
         counter += 1
 
     try:
-        # If gdown already saved into the assets folder (unlikely since output=None),
-        # move may be a no-op; shutil.move handles same-source -> dest behavior.
-        shutil.move(downloaded_path, dest_path)
+        request = service.files().get_media(fileId=file_id)
+        with io.FileIO(dest_path, "wb") as fh:
+            downloader = MediaIoBaseDownload(fh, request)
+            done = False
+            while not done:
+                _, done = downloader.next_chunk()
     except Exception as e:
-        # fallback: try copying then removing
-        try:
-            shutil.copy2(downloaded_path, dest_path)
-            os.remove(downloaded_path)
-        except Exception as ee:
-            print(f"⚠️ Could not move/copy downloaded file: {downloaded_path} -> {dest_path}: {ee}")
-            return None
+        print(f"⚠️ download failed {file_id}: {e}")
+        return None
 
-    # update index
     with _INDEX_LOCK:
         idx = _load_download_index()
         idx[file_id] = dest_path
-        try:
-            _save_download_index(idx)
-        except Exception as e:
-            print(f"⚠️ Failed to update download index: {e}")
+        _save_download_index(idx)
 
     print(f"📥 Downloaded {kind}: {dest_path}")
     return dest_path
@@ -475,7 +438,7 @@ def parallel_download_assets(project: VideoProject, api_key: str):
     ensure_asset_dirs()
     tasks = []
     results = {}
-    with ThreadPoolExecutor(max_workers=8) as executor:
+    with ThreadPoolExecutor(max_workers=1) as executor: #sicne using DriveAPI can only have 1 thread
         for scene in project.scenes:
             if scene.audioUrl:
                 tasks.append(executor.submit(download_asset, scene.audioUrl, "audio"))
@@ -643,8 +606,8 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
     width, height = map(int, project.metadata.resolution.split("x"))
 
     # Workspace folders
-    temp_dir = os.path.join(os.getcwd(), "../temp")
-    result_dir = os.path.join(os.getcwd(), "../Output")
+    temp_dir = os.path.join(os.getcwd(), "temp")
+    result_dir = os.path.join(os.getcwd(), "Output")
     os.makedirs(temp_dir, exist_ok=True)
     os.makedirs(result_dir, exist_ok=True)
 
@@ -830,7 +793,7 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
 # ===============================
 def main():
     parser = argparse.ArgumentParser(description="Render video from JSON (parallel by default).")
-    parser.add_argument("json_path", nargs="?", default="../Input/sorten_to_test_output10.json")
+    parser.add_argument("json_path", nargs="?", default="Input/sorten_to_test_output10.json")
     parser.add_argument("--no-parallel", action="store_true", help="Disable parallel mode.")
 
     args = parser.parse_args()

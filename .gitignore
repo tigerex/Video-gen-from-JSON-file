@@ -6,6 +6,7 @@
 *.mp4
 *.mp3
 *.jpg
+/final_output_*
 
 demo_*
 service_account.json
