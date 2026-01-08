@@ -1,0 +1,1586 @@
+{
+  "videoMetadata": {
+    "title": "This is a longer test version",
+    "resolution": "1920x1080",
+    "fps": 30
+  },
+  "scenes": [
+    {
+      "scene_id": 1,
+      "slide_id": 1,
+      "audioUrl": "https://drive.google.com/file/d/1f_JEyHQlqriGHsRf0mlrbTUY9StyeDaO/view?usp=drivesdk",
+      "audioDuration_sec": 52.3,
+      "layers": [
+        {
+          "layer_id": "image_bg_1",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1xFGEmrtj4OhgvADafi8EbktWqyJBCotu/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.08,
+            "direction": "topLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_1",
+          "type": "text",
+          "content": "Welcome to 'Making Connections'!",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 150,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_1",
+          "type": "text",
+          "content": "Your Practical Guide to Using Comparatives",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 250,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_1_0",
+          "type": "text",
+          "content": "Hello everyone! We're here to make your English even better.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 440,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_1_1",
+          "type": "text",
+          "content": "Today, we'll learn how to compare things, people, and ideas using 'comparatives'.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 510,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_1_2",
+          "type": "text",
+          "content": "By the end of this lesson, you'll feel more confident using comparatives in your daily conversations and writing.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 580,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_1_3",
+          "type": "text",
+          "content": "Let's get started and make your English more expressive!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 650,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 9,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 2,
+      "slide_id": 2,
+      "audioUrl": "https://drive.google.com/file/d/1wNcTFtxl8x7CTDADDrlGksd9wB6keQo9/view?usp=drivesdk",
+      "audioDuration_sec": 59.1,
+      "layers": [
+        {
+          "layer_id": "image_bg_2",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1v7uKv7LlJrzM4c_NkZiLT0GL2DvEr1fe/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.08,
+            "direction": "bottomRight"
+          }
+        },
+        {
+          "layer_id": "title_text_2",
+          "type": "text",
+          "content": "What Are Comparatives, Anyway?",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 150,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_2",
+          "type": "text",
+          "content": "Showing Differences and Similarities Clearly",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 250,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_2_0",
+          "type": "text",
+          "content": "Comparatives are words we use to compare two things, people, or ideas.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 440,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_2_1",
+          "type": "text",
+          "content": "They help us show which item has 'more' or 'less' of a certain quality.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 510,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_2_2",
+          "type": "text",
+          "content": "Think about describing: Is one city 'bigger' than another? Is this movie 'more interesting'?",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 580,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_2_3",
+          "type": "text",
+          "content": "They are essential for expressing preferences, making choices, and giving opinions.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 650,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 9,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 3,
+      "slide_id": 3,
+      "audioUrl": "https://drive.google.com/file/d/1sdZvrFKcacqTgfIx5ZQdBW5GyD4d-7zt/view?usp=drivesdk",
+      "audioDuration_sec": 81.5,
+      "layers": [
+        {
+          "layer_id": "image_bg_3",
+          "type": "image",
+          "url": "https://via.placeholder.com/1920x1080/424242/FFFFFF?text=Image+Not+Available",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.08,
+            "direction": "centerOut"
+          }
+        },
+        {
+          "layer_id": "title_text_3",
+          "type": "text",
+          "content": "Short & Sweet: One-Syllable Adjectives",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 150,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_3",
+          "type": "text",
+          "content": "Just Add \"-er\"!",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 250,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_3_0",
+          "type": "text",
+          "content": "For most adjectives with one syllable, we simply add '-er' to the end.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 405,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_3_1",
+          "type": "text",
+          "content": "Example: tall → taller, old → older, fast → faster.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 475,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_3_2",
+          "type": "text",
+          "content": "Spelling Rule 1: If the adjective ends in consonant + vowel + consonant (CVC), double the last consonant before adding '-er'.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 545,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_3_3",
+          "type": "text",
+          "content": "Example: big → bigger, hot → hotter, thin → thinner.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 615,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 9,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_3_4",
+          "type": "text",
+          "content": "Spelling Rule 2: If the adjective ends in '-y', change 'y' to 'i' and then add '-er'.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 685,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 11,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 4,
+      "slide_id": 4,
+      "audioUrl": "https://drive.google.com/file/d/18tJlKjM-f2fA_1skhzfLpJJCX-M0v68Z/view?usp=drivesdk",
+      "audioDuration_sec": 61.1,
+      "layers": [
+        {
+          "layer_id": "image_bg_4",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1hpl8Otclm_lBFWQVXoQVCO3yZGqn2Y2s/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.08,
+            "direction": "topRight"
+          }
+        },
+        {
+          "layer_id": "title_text_4",
+          "type": "text",
+          "content": "Longer Words, Different Rules",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 150,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_4",
+          "type": "text",
+          "content": "Using \"More\" or \"Less\"",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 250,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_4_0",
+          "type": "text",
+          "content": "For adjectives with two or more syllables (that don't end in -y), we do NOT add '-er'.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 405,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_4_1",
+          "type": "text",
+          "content": "Instead, we put 'more' before the adjective to show a greater degree.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 475,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_4_2",
+          "type": "text",
+          "content": "Example: beautiful → more beautiful, expensive → more expensive, important → more important.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 545,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_4_3",
+          "type": "text",
+          "content": "To show a lesser degree, we use 'less' before the adjective.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 615,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 9,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_4_4",
+          "type": "text",
+          "content": "Example: difficult → less difficult, comfortable → less comfortable.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 685,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 11,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 5,
+      "slide_id": 5,
+      "audioUrl": "https://drive.google.com/file/d/16u5GMqI2YUO-2_--1Cg5khPrsmfONgUA/view?usp=drivesdk",
+      "audioDuration_sec": 75.1,
+      "layers": [
+        {
+          "layer_id": "image_bg_5",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1T3Kk3gidlOs5Gtbvqf8CCBA73U92vOS7/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.08,
+            "direction": "bottomLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_5",
+          "type": "text",
+          "content": "The \"Special\" Ones: Irregular Comparatives",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 150,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_5",
+          "type": "text",
+          "content": "No Rules, Just Remember!",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 250,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_5_0",
+          "type": "text",
+          "content": "Some adjectives don't follow the regular '-er' or 'more/less' rules. They change completely!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 370,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_5_1",
+          "type": "text",
+          "content": "These are called irregular comparatives, and you need to memorize them.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 440,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_5_2",
+          "type": "text",
+          "content": "Good → Better (Example: This book is better than that one.)",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 510,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_5_3",
+          "type": "text",
+          "content": "Bad → Worse (Example: The weather today is worse than yesterday.)",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 580,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 9,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_5_4",
+          "type": "text",
+          "content": "Far → Farther / Further (Example: My house is farther/further from here.)",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 650,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 11,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_5_5",
+          "type": "text",
+          "content": "Little (quantity) → Less (Example: I have less time now.)",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 720,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 13,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 6,
+      "slide_id": 6,
+      "audioUrl": "https://drive.google.com/file/d/10GI1wF5fPhChkN6YyxLS2ov930O4f3Qx/view?usp=drivesdk",
+      "audioDuration_sec": 73.9,
+      "layers": [
+        {
+          "layer_id": "image_bg_6",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1QOTvfnT0ks7v1OZc3XLIw-Blr9QtbNpA/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.08,
+            "direction": "centerIn"
+          }
+        },
+        {
+          "layer_id": "title_text_6",
+          "type": "text",
+          "content": "Connecting Your Comparisons with \"Than\"",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 150,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_6",
+          "type": "text",
+          "content": "The Essential Word for Showing Difference",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 250,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_6_0",
+          "type": "text",
+          "content": "When you compare two things, you almost always use the word 'than' to link them.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 370,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_6_1",
+          "type": "text",
+          "content": "It helps us clearly state what we are comparing one item to.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 440,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_6_2",
+          "type": "text",
+          "content": "Sentence structure: Item 1 + verb + comparative adjective + THAN + Item 2.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 510,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_6_3",
+          "type": "text",
+          "content": "Example: My new phone is faster than my old one.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 580,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 9,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_6_4",
+          "type": "text",
+          "content": "Example: Learning English is more interesting than I thought!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 650,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 11,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_6_5",
+          "type": "text",
+          "content": "Remember: It's 'than', not 'then'!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 720,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 13,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 7,
+      "slide_id": 7,
+      "audioUrl": "https://drive.google.com/file/d/1p-zD44jBk2Wf15qPCF_TIy70lfFwrzE0/view?usp=drivesdk",
+      "audioDuration_sec": 79.5,
+      "layers": [
+        {
+          "layer_id": "image_bg_7",
+          "type": "image",
+          "url": "https://via.placeholder.com/1920x1080/424242/FFFFFF?text=Image+Not+Available",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.08,
+            "direction": "topLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_7",
+          "type": "text",
+          "content": "Comparing Quantities: More, Less, Fewer",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 150,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_7",
+          "type": "text",
+          "content": "For Nouns, Not Just Adjectives!",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 250,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_7_0",
+          "type": "text",
+          "content": "We also use 'more', 'less', and 'fewer' to compare quantities of nouns.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 370,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_7_1",
+          "type": "text",
+          "content": "Use 'more' for both countable and uncountable nouns.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 440,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_7_2",
+          "type": "text",
+          "content": "Example: I have more books than you. (Countable) / I need more information. (Uncountable)",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 510,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_7_3",
+          "type": "text",
+          "content": "Use 'fewer' for countable nouns (things you can count individually).",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 580,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 9,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_7_4",
+          "type": "text",
+          "content": "Example: There are fewer students in this class. / I have fewer problems now.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 650,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 11,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_7_5",
+          "type": "text",
+          "content": "Use 'less' for uncountable nouns (things you cannot count individually).",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 720,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 13,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 8,
+      "slide_id": 8,
+      "audioUrl": "https://drive.google.com/file/d/1Ax6NO-VpFSbjPC3eQ7U_aoRon9jwpo-4/view?usp=drivesdk",
+      "audioDuration_sec": 83.5,
+      "layers": [
+        {
+          "layer_id": "image_bg_8",
+          "type": "image",
+          "url": "https://via.placeholder.com/1920x1080/424242/FFFFFF?text=Image+Not+Available",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.08,
+            "direction": "bottomRight"
+          }
+        },
+        {
+          "layer_id": "title_text_8",
+          "type": "text",
+          "content": "Comparatives in Real Life!",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 150,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_8",
+          "type": "text",
+          "content": "Everyday Situations Where You'll Use Them",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 250,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_8_0",
+          "type": "text",
+          "content": "Describing people and places: 'My brother is taller than me.' 'The city is noisier than the countryside.'",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 440,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_8_1",
+          "type": "text",
+          "content": "Making choices and preferences: 'I prefer tea; it's healthier than soda.' 'This restaurant is better than the one we went to last week.'",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 510,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_8_2",
+          "type": "text",
+          "content": "Giving opinions: 'Learning a new language is more challenging than it looks.' 'This task is easier than the last one.'",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 580,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_8_3",
+          "type": "text",
+          "content": "Comparing products or services: 'This laptop is more expensive, but it's faster.' 'Their customer service is worse than their competitor's.'",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 650,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 9,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 9,
+      "slide_id": 9,
+      "audioUrl": "https://drive.google.com/file/d/1E5PCQ1R-UbJWRpWYJXtjkdWD3JE7JiC6/view?usp=drivesdk",
+      "audioDuration_sec": 95.1,
+      "layers": [
+        {
+          "layer_id": "image_bg_9",
+          "type": "image",
+          "url": "https://via.placeholder.com/1920x1080/424242/FFFFFF?text=Image+Not+Available",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.08,
+            "direction": "centerOut"
+          }
+        },
+        {
+          "layer_id": "title_text_9",
+          "type": "text",
+          "content": "Avoiding Pitfalls: Common Mistakes",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 150,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_9",
+          "type": "text",
+          "content": "Be More Accurate, Be Less Confused!",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 250,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_9_0",
+          "type": "text",
+          "content": "Mistake 1: Double comparatives (e.g., 'more happier', 'more better'). Remember: only one comparative form per adjective!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 405,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_9_1",
+          "type": "text",
+          "content": "Correction: 'happier', 'better'.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 475,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_9_2",
+          "type": "text",
+          "content": "Mistake 2: Confusing 'than' with 'then'. 'Than' is for comparison; 'then' is for time/sequence.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 545,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_9_3",
+          "type": "text",
+          "content": "Correction: 'taller THAN me' (comparison), 'first I ate, THEN I left' (time).",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 615,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 9,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_9_4",
+          "type": "text",
+          "content": "Mistake 3: Using '-er' for long adjectives or 'more' for short ones (e.g., 'beautifuler', 'more tall').",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 685,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 11,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 10,
+      "slide_id": 10,
+      "audioUrl": "https://drive.google.com/file/d/1CSgA-P3KaFkye65y6bXOW3D1H6BO5At7/view?usp=drivesdk",
+      "audioDuration_sec": 81.1,
+      "layers": [
+        {
+          "layer_id": "image_bg_10",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1tpfZJfdt4MDGhwl9_XK58eZx58Xej7V9/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.08,
+            "direction": "topRight"
+          }
+        },
+        {
+          "layer_id": "title_text_10",
+          "type": "text",
+          "content": "Let's Practice!",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 150,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_10",
+          "type": "text",
+          "content": "Put Your Knowledge to the Test!",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 250,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_10_0",
+          "type": "text",
+          "content": "Activity 1: Sentence Completion – Fill in the blanks with the correct comparative form.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 440,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_10_1",
+          "type": "text",
+          "content": "Activity 2: Picture Comparison – Describe differences between two images using comparatives.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 510,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_10_2",
+          "type": "text",
+          "content": "Activity 3: Pair Work – Interview your partner: 'What's more interesting, books or movies?' 'Which season is better, summer or winter?'",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 580,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_10_3",
+          "type": "text",
+          "content": "Activity 4: Quick Write – Write 3-5 sentences comparing two things you know well (e.g., your hometown vs. another city, two hobbies).",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 650,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 9,
+            "duration_sec": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": 11,
+      "slide_id": 11,
+      "audioUrl": "https://drive.google.com/file/d/1Ww3R-_iewplJjenMVQF1Tt3e3vKvh2UE/view?usp=drivesdk",
+      "audioDuration_sec": 84.3,
+      "layers": [
+        {
+          "layer_id": "image_bg_11",
+          "type": "image",
+          "url": "https://drive.google.com/file/d/1PB-iK8BTbt0raP5Z1N_tg36VJPZftJSo/view?usp=drivesdk",
+          "animation": {
+            "type": "KenBurns",
+            "start_zoom": 1,
+            "end_zoom": 1.08,
+            "direction": "bottomLeft"
+          }
+        },
+        {
+          "layer_id": "title_text_11",
+          "type": "text",
+          "content": "You're Doing Great! Summary & Next Steps",
+          "font": "Merriweather",
+          "size": 72,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 960,
+            "y": 150,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 0.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "subtitle_text_11",
+          "type": "text",
+          "content": "Keep Practicing for Fluency!",
+          "font": "Open Sans",
+          "size": 48,
+          "color": "#E0E0E0",
+          "position": {
+            "x": 960,
+            "y": 250,
+            "anchor": "center"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 1.5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_11_0",
+          "type": "text",
+          "content": "Today, we learned how to make comparisons in English!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 405,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 3,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_11_1",
+          "type": "text",
+          "content": "Remember: Short adjectives add '-er' (e.g., faster), long adjectives use 'more/less' (e.g., more interesting).",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 475,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 5,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_11_2",
+          "type": "text",
+          "content": "Don't forget the irregulars (good → better, bad → worse) and always use 'than' to connect your comparisons.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 545,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 7,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_11_3",
+          "type": "text",
+          "content": "Keep practicing! The more you use comparatives, the easier and more natural they will feel.",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 615,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 9,
+            "duration_sec": 1
+          }
+        },
+        {
+          "layer_id": "bullet_text_11_4",
+          "type": "text",
+          "content": "Challenge yourself to notice comparatives in movies, songs, and conversations. You'll become a better English speaker!",
+          "font": "Open Sans",
+          "size": 36,
+          "color": "#FFFFFF",
+          "position": {
+            "x": 150,
+            "y": 685,
+            "anchor": "left"
+          },
+          "animation": {
+            "type": "fadeIn",
+            "startTime_sec": 11,
+            "duration_sec": 1
+          }
+        }
+      ]
+    }
+  ]
+}

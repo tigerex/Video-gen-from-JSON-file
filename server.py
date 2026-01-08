@@ -9,7 +9,7 @@ from typing import Optional, List, Dict
 from fastapi import FastAPI, UploadFile, Form
 from pydantic import BaseModel
 
-import upload_to_drive
+from Script import upload_to_drive
 
 # ---------------------------
 # Directories
@@ -97,7 +97,7 @@ async def run_render(job: Dict):
         log_handle = open(log_file, "wb")
 
         proc = await asyncio.create_subprocess_exec(
-            "python3", "final_solution_ver3.py", input_path,
+            "python3", "Script/final_solution_ver3.py", input_path,
             stdout=log_handle,
             stderr=log_handle
         )

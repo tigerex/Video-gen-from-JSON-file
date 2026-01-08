@@ -119,13 +119,24 @@ class VideoProject:
 # ===============================
 # Asset handling & index
 # ===============================
-ASSET_ROOT = os.path.join(os.getcwd(), "assets")
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
+
+def project_path(*parts):
+    return os.path.join(PROJECT_ROOT, *parts)
+
+# FIXED PATH: assets folder relative to project root
+ASSET_ROOT = project_path("assets")
+
 ASSET_DIRS = {
-    "audio": os.path.join(ASSET_ROOT, "audio"),
-    "images": os.path.join(ASSET_ROOT, "images"),
-    "fonts": os.path.join(ASSET_ROOT, "fonts"),
+    "audio": project_path("assets", "audio"),
+    "images": project_path("assets", "images"),
+    "fonts": project_path("assets", "fonts"),
 }
-DOWNLOAD_INDEX_PATH = os.path.join(ASSET_ROOT, "download_index.json")
+
+# FIXED PATH: download index stored under assets
+DOWNLOAD_INDEX_PATH = project_path("assets", "download_index.json")
+
 _INDEX_LOCK = threading.Lock()  # used only in the main process / threads
 
 # Choosing the best encoder based on available hardware
@@ -643,10 +654,14 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
     width, height = map(int, project.metadata.resolution.split("x"))
 
     # Workspace folders
-    temp_dir = os.path.join(os.getcwd(), "temp")
-    result_dir = os.path.join(os.getcwd(), "Output")
+    temp_dir = project_path("temp")
+    result_dir = project_path("Output")
     os.makedirs(temp_dir, exist_ok=True)
     os.makedirs(result_dir, exist_ok=True)
+
+    print(f"📁 Project root: {PROJECT_ROOT}")
+    print(f"📁 Assets root: {ASSET_ROOT}")
+    print(f"📁 Output dir: {result_dir}")
 
     # Timestamp for file naming
     start_time = datetime.now()
@@ -830,7 +845,13 @@ def build_video_from_project_parallel(project: VideoProject, api_key: str):
 # ===============================
 def main():
     parser = argparse.ArgumentParser(description="Render video from JSON (parallel by default).")
-    parser.add_argument("json_path", nargs="?", default="Input/sorten_to_test_output10.json")
+
+    # FIXED PATH: default input JSON relative to project root
+    parser.add_argument(
+        "json_path",
+        nargs="?",
+        default=project_path("Input", "sorten_to_test_output10.json")
+)
     parser.add_argument("--no-parallel", action="store_true", help="Disable parallel mode.")
 
     args = parser.parse_args()
