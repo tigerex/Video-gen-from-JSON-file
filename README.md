@@ -87,17 +87,23 @@ This repository uses **MoviePy 2.2** APIs and aims to be robust against partial 
 ### GUI (recommended)
 Run the Tkinter UI which is the main user-facing entry point:
 ```bash
-python UI_moviePy.py
+python Script/UI_moviePy.py
 ```
 Use the UI to import your JSON (default file `scene_composition_agent_output.json`), download assets, tweak resolution/fps, and start rendering. You can view per-scene logs in the UI and use **Stop** or **SCRAM** controls as needed.
 
 ### CLI (developer)
-There is also a CLI entry point in `final_solution_ver.py` (single-file runner):
+There is also a CLI entry point in `final_solution_ver3.py` (single-file runner):
 ```bash
-python final_solution_ver.py path/to/project.json
+python Script/final_solution_ver3.py path/to/project.json
 ```
-> Note: The UI currently depends on `final_solution_ver2` functions for backend orchestration. If you prefer CLI-only workflows, `final_solution_ver2.py` contains the core pipeline functions (download, render scenes, concatenate). As of 25/10/2025, the UI need rework since the core `final_solution_ver2` got some updates and changes. Expect bugs on the UI!!!!!!!!!!
+> Note: The UI currently depends on `final_solution_ver3` functions for backend orchestration. If you prefer CLI-only workflows, `final_solution_ver3.py` contains the core pipeline functions (download, render scenes, concatenate). As of 25/10/2025, the UI need rework since the core `final_solution_ver3` got some updates and changes. Expect bugs on the UI!!!!!!!!!!
 
+### To start server
+Stand at the root file and run command:
+```bash
+uvicorn server:app --host 0.0.0.0 --port 5902
+```
+require a working Google service account (JSON format)
 ---
 
 ## 📁 Project Structure
@@ -110,13 +116,17 @@ python final_solution_ver.py path/to/project.json
 │   └─ fonts/
 ├─ /Documents/                  # include all the documents
 ├─ /Input/                      # all JSON file should be in here
-├─ /Output/                     # rendered final videos and logs (only logs for now)
-├─ /temp/                       # temporary scene outputs (auto-clean recommended)
-├─ UI_moviePy.py                # Tkinter-based UI (main entrypoint for now)
-├─ final_solution_ver2.py            # Core rendering backend used by UI and CLI
-├─ scene_composition_agent_output.json  # example/default JSON input
+│   └─ scene_composition_agent_output.json  # example JSON input
+├─ /Output/                     # rendered final videos and logs 
+├─ /Script/                       
+│   ├─ UI_moviePy.py                # Tkinter-based UI (main entrypoint for now)
+│   ├─ final_solution_ver2.py       # Core rendering backend used by UI and CLI
+│   ├─ final_solution_ver3.py       # Version 3 (default right now)
+│   ├─ final_solution_ver4.py       # Version 4 (under-developing)
+│   └─ ...
 ├─ requirements.txt             # Python package dependencies
-└─ README.md                    # (this file)
+│  README.md                    # (this file)
+└─ server.py                    # main server script
 ```
 
 ---
